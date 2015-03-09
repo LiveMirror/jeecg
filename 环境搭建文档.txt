@@ -1,0 +1,5 @@
+说明：
+   1.该版本数据初始化，需要执行脚本 doc/jeecg-mysql.sql
+   2.开发环境 eclipse+jdk7+tomcat6+maven+mysql
+   3.项目maven如果缺少jar包，请通过地址下载 http://www.jeecg.org/forum.php?mod=viewthread&tid=2102&extra=page%3D1
+   4.项目启动访问地址：http://localhost:8080/jeecg

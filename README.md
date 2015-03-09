@@ -20,13 +20,17 @@ JEECG×ÚÖ¼ÊÇ: ¼òµ¥¹¦ÄÜÓÉ´úOnline CodingÅäÖÃ³ö¹¦ÄÜ;¸´ÔÓ¹¦ÄÜÓÉ´úÂëÉú³ÉÆ÷Éú³É½øÐÐÊÖ¹
 * 1.²ÉÓÃÖ÷Á÷¿ò¼Ü£¬ÈÝÒ×ÉÏÊÖ; ´úÂëÉú³ÉÆ÷ÒÀÀµÐÔµÍ,ºÜ·½±ãµÄÀ©Õ¹ÄÜÁ¦£¬¿ÉÍêÈ«ÊµÏÖ¶þ´Î¿ª·¢;
 * 2.¿ª·¢Ð§ÂÊºÜ¸ß,²ÉÓÃ´úÂëÉú³ÉÆ÷£¬µ¥±íÊý¾ÝÄ£ÐÍºÍÒ»¶Ô¶à(¸¸×Ó±í)Êý¾ÝÄ£ÐÍ£¬ÔöÉ¾¸Ä²é¹¦ÄÜ×Ô¶¯Éú³É£¬²Ëµ¥ÅäÖÃÖ±½ÓÊ¹ÓÃ£»
 * 3.Ò³ÃæÐ£Ñé×Ô¶¯Éú³É(±ØÐëÊäÈë¡¢Êý×ÖÐ£Ñé¡¢½ð¶îÐ£Ñé¡¢Ê±¼ä¿Õ¼äµÈ);
-* 4.·â×°ÍêÉÆµÄÓÃ»§»ù´¡È¨ÏÞºÍÊý¾Ý×ÖµäµÈ»ù´¡¹¦ÄÜ£¬Ö±½ÓÊ¹ÓÃÎÞÐèÐÞ¸Ä
+* 4.·â×°ÍêÉÆµÄÓÃ»§»ù´¡È¨ÏÞ¡¢Ç¿´óµÄÊý¾ÝÈ¨ÏÞ¡¢ºÍÊý¾Ý×ÖµäµÈ»ù´¡¹¦ÄÜ£¬Ö±½ÓÊ¹ÓÃÎÞÐèÐÞ¸Ä
 * 5.³£ÓÃ¹²Í¨·â×°£¬¸÷ÖÖ¹¤¾ßÀà(¶¨Ê±ÈÎÎñ,¶ÌÐÅ½Ó¿Ú,ÓÊ¼þ·¢ËÍ,Excelµ¼³öµÈ),»ù±¾Âú×ã80%ÏîÄ¿ÐèÇó
 * 6.¼¯³É¼òÒ×±¨±í¹¤¾ß£¬Í¼Ïñ±¨±íºÍÊý¾Ýµ¼³ö·Ç³£·½±ã£¬¿É¼«Æä·½±ãµÄÉú³Épdf¡¢excel¡¢wordµÈ±¨±í£»
 * 7.¼¯³É¹¤×÷Á÷activiti£¬²¢ÊµÏÖÁËÖ»ÐèÔÚÒ³ÃæÅäÖÃÁ÷³Ì×ªÏò£¬¿É¼«´óµÄ¼ò»¯jbpm¹¤×÷Á÷µÄ¿ª·¢£»ÓÃjbpmµÄÁ÷³ÌÉè¼ÆÆ÷»­³öÁËÁ÷³Ì×ßÏò£¬Ò»¸ö¹¤×÷Á÷»ù±¾¾ÍÍê³ÉÁË£¬Ö»ÐèÐ´ºÜÉÙÁ¿µÄjava´úÂë£»
 * 8.UI¿ìËÙ¿ª·¢¿â£¬Õë¶ÔWEB UI½øÐÐ±ê×¼Ê½·â×°£¬Ò³ÃæÍ³Ò»²ÉÓÃ×Ô¶¨Òå±êÇ©ÊµÏÖ¹¦ÄÜ£ºÁÐ±íÊý¾ÝÕ¹ÏÖ¡¢Ò³ÃæÐ£ÑéµÈ,±êÇ©Ê¹ÓÃ¼òµ¥ÇåÎúÇÒ±ãÓÚÎ¬»¤
 * 9.ÔÚÏßÁ÷³ÌÉè¼Æ£¬²ÉÓÃ¿ªÔ´ActivitiÁ÷³ÌÒýÇæ£¬ÊµÏÖÔÚÏß»­Á÷³Ì,×Ô¶¨Òå±íµ¥,±íµ¥¹Ò¿¿,ÒµÎñÁ÷×ª
 * 10.²éÑ¯Ìõ¼þÉú³ÉÆ÷£º²éÑ¯¹¦ÄÜ×Ô¶¯Éú³É£¬ºóÌ¨¶¯Ì¬Æ´SQL×·¼Ó²éÑ¯Ìõ¼þ£»Ö§³Ö¶àÖÖÆ¥Åä·½Ê½£¨È«Æ¥Åä/Ä£ºý²éÑ¯/°üº¬²éÑ¯/²»Æ¥Åä²éÑ¯£©£»
+* 11.¶àÊý¾ÝÔ´£º¼°Æä¼òÒ×µÄÊ¹ÓÃ·½Ê½£¬ÔÚÏßÅäÖÃÊý¾ÝÔ´ÅäÖÃ£¬±ã½ÝµÄ´ÓÆäËûÊý¾Ý×¥È¡Êý¾Ý£»
+* 12.¹ú¼Ê»¯£ºÖ§³Ö¶àÓïÑÔ£¬¿ª·¢¹ú¼Ê»¯ÏîÄ¿·Ç³£·½±ã£»
+* 13.Êý¾ÝÈ¨ÏÞ£¨¾«Ï¸»¯Êý¾ÝÈ¨ÏÞ¿ØÖÆ£¬¿ØÖÆµ½ÐÐ¼¶£¬ÁÐ±í¼¶£¬±íµ¥×Ö¶Î¼¶£¬ÊµÏÖ²»Í¬ÈË¿´²»Í¬Êý¾Ý£¬²»Í¬ÈË¶ÔÍ¬Ò»¸öÒ³Ãæ²Ù×÷²»Í¬×Ö¶Î
+ 
 
 JEECG ÊÊÓÃ·¶Î§
 -----------------------------------
@@ -36,7 +40,7 @@ JEECGÖÇÄÜ¿ª·¢Æ½Ì¨£¬¿ÉÒÔÓ¦ÓÃÔÚÈÎºÎJ2EEÏîÄ¿µÄ¿ª·¢ÖÐ£¬ÓÈÆäÊÊºÏÆóÒµÐÅÏ¢¹ÜÀíÏµÍ³£¨MIS
 
 JEECG ¹¦ÄÜÌØµã
 -----------------------------------
-* 	JEECG V3.0°æ±¾²ÉÓÃSpringMVC+Hibernate+UI¿ìËÙ¿ª·¢¿â+Spring jdbc+ freemarker+ Highcharts+ bootstrap+Ehcache µÄ»ù´¡¼Ü¹¹</br>
+* 	JEECG V3.5.0+Hibernate+UI¿ìËÙ¿ª·¢¿â+Spring jdbc+ freemarker+ Highcharts+ bootstrap+Ehcache µÄ»ù´¡¼Ü¹¹</br>
 * 	²ÉÓÃÃæÏòÉùÃ÷µÄ¿ª·¢Ä£Ê½£¬ »ùÓÚ·ºÐÍ±àÐ´¼«ÉÙ´úÂë¼´¿ÉÊµÏÖ¸´ÔÓµÄÊý¾ÝÕ¹Ê¾¡¢Êý¾Ý±à¼­¡¢
 ±íµ¥´¦ÀíµÈ¹¦ÄÜ£¬ÔÙÅäºÏOnline CodingÔÚÏß¿ª·¢Óë´úÂëÉú³ÉÆ÷µÄÊ¹ÓÃ,½«J2EEµÄ¿ª·¢Ð§ÂÊÌá¸ß6±¶ÒÔÉÏ£¬¿ÉÒÔ½«´úÂë¼õÉÙ80%ÒÔÉÏ¡£</br>
 
@@ -50,8 +54,11 @@ JEECG ¹¦ÄÜÌØµã
 * 	<b>¼¼ÊõµãÁù£º</b>Web GISÖ§³Ö £¨»ù´¡¼¼ÊõGISµÄÖ§³Ö£©</br>
 * 	<b>¼¼ÊõµãÆß£º</b>ÒÆ¶¯Æ½Ì¨Ö§³Ö£¬¶ÔBootstrap(¼æÈÝHtml5)½øÐÐ±ê×¼·â×° </br>
 * 	<b>¼¼Êõµã°Ë£º</b>¶¯Ì¬±¨±í¹¦ÄÜ£¨ÓÃ»§ÊäÈëÒ»¸ösql£¬ÏµÍ³×Ô¶¯½âÎöÉú³É±¨±í£©</br>
+*   <b>¼¼Êõµã¾Å£º</b>Êý¾ÝÈ¨ÏÞ£¨¾«Ï¸»¯Êý¾ÝÈ¨ÏÞ¿ØÖÆ£¬¿ØÖÆµ½ÐÐ¼¶£¬ÁÐ±í¼¶£¬±íµ¥×Ö¶Î¼¶£¬ÊµÏÖ²»Í¬ÈË¿´²»Í¬Êý¾Ý£¬²»Í¬ÈË¶ÔÍ¬Ò»¸öÒ³Ãæ²Ù×÷²»Í¬×Ö¶Î£©</br>
+*   <b>¼¼ÊõµãÊ®£º</b>¹ú¼Ê»¯£¨Ö§³Ö¶àÓïÑÔ£¬¹ú¼Ê»¯µÄ·â×°Îª¶àÓïÑÔ×öÁË±ã½ÝÖ§³Ö£©</br>
+*   <b>¼¼ÊõµãÊ®Ò»£º</b>¶àÊý¾ÝÔ´£¨ÔÚÏßÅäÖÃÊý¾ÝÔ´£¬Êý¾ÝÔ´¹¤×÷Àà·â×°£©</br>
 	
-* 	JEECG V3.0,¾­¹ýÁË×¨ÒµÑ¹Á¦²âÊÔ,ÐÔÄÜ²âÊÔ£¬±£Ö¤ºóÌ¨Êý¾ÝµÄ×¼È·ÐÔºÍÒ³Ãæ·ÃÎÊËÙ¶È</br>
+* 	JEECG V3.5.0,¾­¹ýÁË×¨ÒµÑ¹Á¦²âÊÔ,ÐÔÄÜ²âÊÔ£¬±£Ö¤ºóÌ¨Êý¾ÝµÄ×¼È·ÐÔºÍÒ³Ãæ·ÃÎÊËÙ¶È</br>
 * 	Ö§³Ö¶àÖÖä¯ÀÀÆ÷: IE, »ðºü, Google µÈ</br>
 * 	Ö§³ÖÊý¾Ý¿â: Mysql,Oracle10g,Postgre,SqlServerµÈ</br>
 * 	»ù´¡È¨ÏÞ: ÓÃ»§£¬½ÇÉ«£¬²Ëµ¥È¨ÏÞ£¬°´Å¥È¨ÏÞ£¬Êý¾ÝÈ¨ÏÞ</br>
@@ -102,14 +109,14 @@ JEECG ¹¦ÄÜÌØµã
 
 ¼¼ÊõÎÄµµ
 -----------------------------------
-* [JEECG ¼¼ÊõÎÄµµ](http://code.google.com/p/jeecg/downloads/detail?name=JEECG%20v3.3.1.beta%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C.zip&can=2&q=#makechanges)
-* [JEECG Ô´ÂëÏÂÔØ](http://code.google.com/p/jeecg/downloads/list)
-
+* [JEECG ÈëÃÅÊÓÆµ](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
+* [JEECG ÀúÊ·°æ±¾](http://www.jeecg.org/forum.php?mod=viewthread&tid=1229&page=1&extra=#pid3642)
+* [JEECG ÎÄµµ](http://osbaba.com:8002/display/12/Home)
     
 ¼¼Êõ½»Á÷
 -----------------------------------
 * 	×÷Õß£ºÕÅ´úºÆ</br>
-* 	ÓÊÏä£ºzhangdaiscott@163.com
+* 	ÓÊÏä£ºjeecg@sina.com
 * 	ÂÛÌ³£º[www.jeecg.org](http://www.jeecg.org)
 * 	½»Á÷Èº:106259349, 106838471, 289782002</br>
-* 	ÔÚÏßÑÝÊ¾: [JEECGÑÝÊ¾DEMO](http://demo.jeecg.org:8090/)
+* 	ÔÚÏßÑÝÊ¾: [ÔÚÏßÑÝÊ¾](http://219.232.255.211:8080/)
