@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+﻿<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jeecgframework</groupId>
@@ -75,7 +75,7 @@
         <!-- sqlserver2005 -->
         <sqlserver.version>1.0.0</sqlserver.version>
         <!-- oracle -->
-        <ojdbc14.version>10.2.0.4.0</ojdbc14.version>
+        <ojdbc14.version>10.2.0.5.0</ojdbc14.version>
         <!-- jtds for mssql/db2 -->
         <jtds.version>1.2.4</jtds.version>
         <h2.version>1.3.170</h2.version>
@@ -102,7 +102,7 @@
 		<xstream.version>1.4.4</xstream.version>
 		<groovy.version>2.3.3</groovy.version>
         <!--poi 工具类 -->
-        <easypoi.version>2.0.3</easypoi.version>
+        <easypoi.version>2.0.5</easypoi.version>
 	</properties>
 
 	<repositories>
