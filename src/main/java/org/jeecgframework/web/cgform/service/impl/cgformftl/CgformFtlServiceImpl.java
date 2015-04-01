@@ -13,8 +13,8 @@ import java.util.Map;
 @Service("cgformFtlService")
 @Transactional
 public class CgformFtlServiceImpl extends CommonServiceImpl implements CgformFtlServiceI {
-//    update-start--Author:zhangguoming  Date:20140922 for：根据ftlVersion动态读取模板
-    @Override
+
+    
     public Map<String, Object> getCgformFtlByTableName(String tableName, String ftlVersion) {
         StringBuilder sql = new StringBuilder("");
         sql.append("select ftl.* from cgform_ftl ftl,cgform_head head");
@@ -27,7 +27,7 @@ public class CgformFtlServiceImpl extends CommonServiceImpl implements CgformFtl
         }
         return null;
     }
-//    update-end--Author:zhangguoming  Date:20140922 for：根据ftlVersion动态读取模板
+
 
     /**
 	 * 根据tableName获取form模板信息
@@ -72,7 +72,7 @@ public class CgformFtlServiceImpl extends CommonServiceImpl implements CgformFtl
 		return false;
 	}
 
-	@Override
+	
 	public String getUserFormFtl(String id) {
 		CriteriaQuery cq = new CriteriaQuery(CgformFtlEntity.class);
 		cq.eq("cgformId", id);

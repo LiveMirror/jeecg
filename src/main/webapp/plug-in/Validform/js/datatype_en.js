@@ -11,10 +11,9 @@ $.Datatype.need2 = function(gets, obj, curform, regxp) {
 };
 $.Datatype.d=/^(\d*\.)?\d+$/;
 
-//update-start--Author:zhangguoming  Date:20140826 for：添加 下拉框、combotree 验证
 $.Datatype.select1 = function(gets, obj, curform, regxp) {
     var name = obj.attr("name") != undefined ? "name" : "comboname"; // select 或 combotree
     var need = 1, numselected = curform.find("select[" + name + "='" + obj.attr(name) + "'] option[selected='selected']").length;
     return numselected >= need ? true : "Please only select" + need + "item!";
 };
-//update-end--Author:zhangguoming  Date:20140826 for：添加 下拉框、combotree 验证
+

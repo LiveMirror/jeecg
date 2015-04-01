@@ -87,11 +87,7 @@ public class FunctionController extends BaseController {
 	 */
 	@RequestMapping(params = "operation")
 	public ModelAndView operation(HttpServletRequest request, String functionId) {
-		// ----------------------------------------------------------------
-		// ----------------------------------------------------------------
 		request.setAttribute("functionId", functionId);
-		// ----------------------------------------------------------------
-		// ----------------------------------------------------------------
 		return new ModelAndView("system/operation/operationList");
 	}
 
@@ -103,11 +99,7 @@ public class FunctionController extends BaseController {
 	@RequestMapping(params = "dataRule")
 	public ModelAndView operationData(HttpServletRequest request,
 			String functionId) {
-		// ----------------------------------------------------------------
-		// ----------------------------------------------------------------
 		request.setAttribute("functionId", functionId);
-		// ----------------------------------------------------------------
-		// ----------------------------------------------------------------
 		return new ModelAndView("system/dataRule/ruleDataList");
 	}
 
@@ -139,14 +131,10 @@ public class FunctionController extends BaseController {
 	public void opdategrid(HttpServletRequest request,
 			HttpServletResponse response, DataGrid dataGrid) {
 		CriteriaQuery cq = new CriteriaQuery(TSOperation.class, dataGrid);
-		// ----------------------------------------------------------------
-		// ----------------------------------------------------------------
 		String functionId = oConvertUtils.getString(request
 				.getParameter("functionId"));
 		cq.eq("TSFunction.id", functionId);
 		cq.add();
-		// ----------------------------------------------------------------
-		// ----------------------------------------------------------------
 		this.systemService.getDataGridReturn(cq, true);
 		TagUtil.datagrid(response, dataGrid);
 	}
@@ -241,14 +229,10 @@ public class FunctionController extends BaseController {
 	@ResponseBody
 	public AjaxJson saveFunction(TSFunction function, HttpServletRequest request) {
 		AjaxJson j = new AjaxJson();
-		// ----------------------------------------------------------------
-		// ----------------------------------------------------------------
 		String functionOrder = function.getFunctionOrder();
 		if (StringUtils.isEmpty(functionOrder)) {
 			function.setFunctionOrder("0");
 		}
-		// ----------------------------------------------------------------
-		// ----------------------------------------------------------------
 		if (function.getTSFunction().getId().equals("")) {
 			function.setTSFunction(null);
 		} else {
@@ -262,17 +246,11 @@ public class FunctionController extends BaseController {
 			userService.saveOrUpdate(function);
 			systemService.addLog(message, Globals.Log_Type_UPDATE,
 					Globals.Log_Leavel_INFO);
-			// update-end--Author:anchao Date:20140914 for：Jeecg bug 20140914 菜单更新级别后显示混乱
+
 			List<TSFunction> subFunction = systemService.findByProperty(TSFunction.class, "TSFunction.id", function.getId());
 			updateSubFunction(subFunction,function);
-			// update-end--Author:anchao Date:20140914 for：Jeecg bug 20140914 菜单更新级别后显示混乱
-			// ----------------------------------------------------------------
-			// ----------------------------------------------------------------
 
 			systemService.flushRoleFunciton(function.getId(), function);
-
-			// ----------------------------------------------------------------
-			// ----------------------------------------------------------------
 
 		} else {
 			if (function.getFunctionLevel().equals(Globals.Function_Leave_ONE)) {
@@ -341,7 +319,7 @@ public class FunctionController extends BaseController {
 		List<TSFunction> fuinctionlist = systemService
 				.getList(TSFunction.class);
 		req.setAttribute("flist", fuinctionlist);
-		// update-begin--Author:zhangguoming Date:20140509 for：添加云桌面图标管理
+
 		// List<TSIcon> iconlist = systemService.getList(TSIcon.class);
 		List<TSIcon> iconlist = systemService
 				.findByQueryString("from TSIcon where iconType != 3");
@@ -349,7 +327,7 @@ public class FunctionController extends BaseController {
 		List<TSIcon> iconDeskList = systemService
 				.findByQueryString("from TSIcon where iconType = 3");
 		req.setAttribute("iconDeskList", iconDeskList);
-		// update-end--Author:zhangguoming Date:20140509 for：添加云桌面图标管理
+
 		if (functionid != null) {
 			function = systemService.getEntity(TSFunction.class, functionid);
 			req.setAttribute("function", function);
@@ -406,9 +384,9 @@ public class FunctionController extends BaseController {
 		cq.addOrder("functionOrder", SortDirection.asc);
 		cq.add();
 		List<TSFunction> functionList = systemService.getListByCriteriaQuery(cq, false);
-//        update-start-Author:zhangguoming  Date:20140914 for：菜单管理页面：菜单排序
+
         Collections.sort(functionList, new NumberComparator());
-//        update-end-Author:zhangguoming  Date:20140914 for：菜单管理页面：菜单排序
+
         List<TreeGrid> treeGrids = new ArrayList<TreeGrid>();
 		TreeGridModel treeGridModel = new TreeGridModel();
 		treeGridModel.setIcon("TSIcon_iconPath");
@@ -479,7 +457,6 @@ public class FunctionController extends BaseController {
 		return comboTrees;
 	}
 
-	// update-end--Author:gaofeng Date:20140619 for：修改云桌面的搜索功能中的系统中应用内搜索
 	/**
 	 * 菜单模糊检索功能
 	 * 
@@ -548,7 +525,6 @@ public class FunctionController extends BaseController {
 		return new ModelAndView("system/function/menuAppList");
 	}
 
-	// update-end--Author:gaofeng Date:20140619 for：修改云桌面的搜索功能中的系统中应用内搜索
 
 	/**
 	 * 

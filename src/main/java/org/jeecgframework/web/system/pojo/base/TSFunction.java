@@ -29,7 +29,7 @@ public class TSFunction extends IdEntity implements java.io.Serializable {
 	private String functionOrder;//菜单排序
 	private Short functionType;//菜单类型
 	private TSIcon TSIcon = new TSIcon();//菜单图标
-    //        update-begin--Author:zhangguoming  Date:20140509 for：添加云桌面图标实体
+
 	private TSIcon TSIconDesk;//云桌面菜单图标
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "desk_iconid")
@@ -39,7 +39,7 @@ public class TSFunction extends IdEntity implements java.io.Serializable {
     public void setTSIconDesk(TSIcon TSIconDesk) {
         this.TSIconDesk = TSIconDesk;
     }
-    //        update-end--Author:zhangguoming  Date:20140509 for：添加云桌面图标实体
+
 
 	private List<TSFunction> TSFunctions = new ArrayList<TSFunction>();
 	@ManyToOne(fetch = FetchType.LAZY)

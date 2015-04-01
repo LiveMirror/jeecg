@@ -58,12 +58,12 @@ function initData() {
 	addTableHead();
 	$.get("cgFormHeadController.do?getColumnList&id=" + $("#id").val(),
 			getDataHanlder);
-	//update---start--author：JueYue---------date：20140824---------for：table adapter size 
+
 	$('.t_table').height($(window).height()-300);
 	$(window).resize(function(){
 		$('.t_table').height($(window).height()-300);
 	});
-	//update---start--end：JueYue---------date：20140824---------for：table adapter size 
+
 	
 }
 
@@ -78,7 +78,7 @@ function addTableHead() {
 	}
 }
 // 兼容不同浏览器获取iframe 内容
-//update-begin--Author:JueYue  Date:20140213 for：因为Iframe获取失败,而导致详情看不到的情况
+
 //主要情况是ie11下的版本是火狐的标识倒是出差错
 function getIframeDocument(id){
 	if(window.frames["iframe_" + id].contentDocument){
@@ -86,7 +86,7 @@ function getIframeDocument(id){
 	}
 	return window.frames["iframe_" + id].document;
 }
-//update-begin--Author:JueYue  Date:20140213 for：因为Iframe获取失败,而导致详情看不到的情况
+
 
 /**
  * 获取数据的回调

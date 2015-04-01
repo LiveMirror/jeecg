@@ -48,7 +48,7 @@ public class RandCodeImageServlet extends HttpServlet {
 	 */
 	private static final int lineWidth = 2;
 
-	@Override
+	
 	public void doGet(final HttpServletRequest request,
 			final HttpServletResponse response) throws ServletException,
 			IOException {
@@ -107,7 +107,7 @@ public class RandCodeImageServlet extends HttpServlet {
 		ImageIO.write(image, "JPEG", response.getOutputStream());
 	}
 
-	@Override
+	
 	public void doPost(final HttpServletRequest request,
 			final HttpServletResponse response) throws ServletException,
 			IOException {

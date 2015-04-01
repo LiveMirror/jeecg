@@ -7,7 +7,7 @@
 <t:base type="jquery,easyui,tools"></t:base>
     <%--update-start--Author:zhangguoming  Date:20140825 for：添加组织机构combobox多选的处理方法--%>
     <script>
-//        update-start--Author:zhangguoming  Date:20140826 for：将combobox修改为combotree
+
         function setOrgIds() {
 //            var orgIds = $("#orgSelect").combobox("getValues");
             var orgIds = $("#orgSelect").combotree("getValues");
@@ -26,7 +26,7 @@
             <%--$("#orgSelect").combobox("setValues", ${orgIdList});--%>
             $("#orgSelect").combotree("setValues", ${orgIdList});
         });
-//       update-start--Author:zhangguoming  Date:20140826 for：将combobox修改为combotree
+
     </script>
     <%--update-end--Author:zhangguoming  Date:20140825 for：添加组织机构combobox多选的处理方法--%>
 </head>

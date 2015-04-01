@@ -177,11 +177,11 @@ public class DataBaseServiceImpl extends CommonServiceImpl implements DataBaseSe
 						data.put(String.valueOf(key), newV);
 					}
 				}
-			//update---start--author：JueYue---------date：20140824---------for：默认值无效
+
 			} else if(oConvertUtils.isNotEmpty(fieldConfigs.get(key).getFieldDefault())) {
 				data.remove(key.toString().toLowerCase());
 			}
-			//update---end--author：JueYue---------date：20140824---------for：默认值无效
+
 		}
 		return data;
 	}
@@ -298,10 +298,10 @@ public class DataBaseServiceImpl extends CommonServiceImpl implements DataBaseSe
 			sql = sql.replace("#{UUID}", UUIDGenerator.generate());
 		}
 		for (String key : params.keySet()) {
-            //update-begin--Author:JueYue  Date:20140425 for：String不能强转
+
 //            sql = sql.replace("${" + key + "}", "'"+String.valueOf(params.get(key))+"'");
 			sql = sql.replace("#{" + key + "}",String.valueOf(params.get(key)));
-            //update-end--Author:JueYue  Date:20140425 for：String不能强转
+
 		}
 		return sql;
 	}

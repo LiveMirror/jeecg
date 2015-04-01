@@ -596,13 +596,9 @@ public class SystemController extends BaseController {
 		if (StringUtil.isNotEmpty(comboTree.getId())) {
 			cq.eq("TSPDepart.id", comboTree.getId());
 		}
-		// ----------------------------------------------------------------
-		// ----------------------------------------------------------------
 		if (StringUtil.isEmpty(comboTree.getId())) {
 			cq.isNull("TSPDepart.id");
 		}
-		// ----------------------------------------------------------------
-		// ----------------------------------------------------------------
 		cq.add();
 		List<TSDepart> departsList = systemService.getListByCriteriaQuery(cq, false);
 		List<ComboTree> comboTrees = new ArrayList<ComboTree>();

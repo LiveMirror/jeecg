@@ -18,19 +18,19 @@ public class TSSmsSqlServiceImpl extends CommonServiceImpl implements TSSmsSqlSe
 
 	@Resource
 	private JdbcTemplate jdbcTemplate;
-	@Override
+	
 	public boolean doAddSql(TSSmsSqlEntity t) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
+	
 	public boolean doDelSql(TSSmsSqlEntity t) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
+	
 	public boolean doUpdateSql(TSSmsSqlEntity t) {
 		// TODO Auto-generated method stub
 		return false;

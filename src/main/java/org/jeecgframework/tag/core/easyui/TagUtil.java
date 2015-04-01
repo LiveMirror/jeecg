@@ -73,7 +73,7 @@ public class TagUtil {
 		}
 		value = reflectHelper.getMethodValue(fieldName)==null?"":reflectHelper.getMethodValue(fieldName);
 		if (value !=""&&value != null && (FiledName.indexOf("_") != -1||FiledName.indexOf(".") != -1)) {
-//            update-start--Author:zhangguoming  Date:20140827 for：功能增强，添加处理对象中List<Object>属性字段的解析
+
             if(value instanceof List) {
                 Object tempValue = "";
                 for (Object listValue : (List)value) {
@@ -83,7 +83,7 @@ public class TagUtil {
             } else {
                 value = fieldNametoValues(childFieldName, value);
             }
-//            update-end--Author:zhangguoming  Date:20140827 for：功能增强，添加处理对象中List<Object>属性字段的解析
+
 		}
 		if(value != "" && value != null) {
 			value = value.toString().replaceAll("\r\n", "");

@@ -283,7 +283,7 @@ public class DataGridTag extends TagSupport {
 		dataGridColumn.setAutocomplete(isAuto);
 		dataGridColumn.setExtendParams(extendParams);
 		columnList.add(dataGridColumn);
-		//update-begin--Author:anchao  Date:20140826 for：[bugfree号]数据列权限控制--------------------
+
 		Set<String> operationCodes = (Set<String>) super.pageContext.getRequest().getAttribute(Globals.OPERATIONCODES);
 		if (null!=operationCodes) {
 			for (String MyoperationCode : operationCodes) {
@@ -297,7 +297,7 @@ public class DataGridTag extends TagSupport {
 				}
 			}
 		}
-		//update-end--Author:anchao  Date:20140826 for：[bugfree号]数据列权限控制--------------------
+
 
 		
 		
@@ -476,9 +476,9 @@ public class DataGridTag extends TagSupport {
 				sb.append(",\"mData\":\"" + column.getField() + "\"");
 				sb.append(",\"sWidth\":\"" + colwidth + "\"");
 				sb.append(",\"bSortable\":" + column.isSortable() + "");
-//                update-start-Author:zhangguoming  Date:20140921 for：TASK #458 列表hidden=false，才是隐藏好像有点问题
+
 				sb.append(",\"bVisible\":" + !column.isHidden() + "");
-//                update-end-Author:zhangguoming  Date:20140921 for：TASK #458 列表hidden=false，才是隐藏好像有点问题
+
 				sb.append(",\"bSearchable\":" + column.isQuery() + "");
 			}
 			sb.append("}");
@@ -617,21 +617,19 @@ public class DataGridTag extends TagSupport {
 			sb.append("function dosearch(params){");
 			sb.append("var jsonparams=$.parseJSON(params);");
 			sb.append("$(\'#" + name + "\')." + grid + "({url:'" + actionUrl + "&field=" + searchFields + "',queryParams:jsonparams});" + "}");
-			
-			//update-begin chenxu 20140423 for:修改在弹出界面中使用single查询模式时，查询条件不起作用
+
 			 //searchbox框执行方法
 			  searchboxFun(sb,grid);
-			//update-end chenxu 20140423 for:修改在弹出界面中使用single查询模式时，查询条件不起作用
+
 			//生成重置按钮功能js
-			  
-			//update-begin Robin 20140426 for:回车事件
+
 			//回车事件
 			sb.append("function EnterPress(e){");
 			sb.append("var e = e || window.event;");
 			sb.append("if(e.keyCode == 13){ ");
 			sb.append(name+"search();");
 			sb.append("}}");
-			//update-begin Robin 20140426 for:回车事件
+
 				
 			sb.append("function searchReset(name){");
 			sb.append(" $(\"#\"+name+\"tb\").find(\":input\").val(\"\");");
@@ -698,7 +696,7 @@ public class DataGridTag extends TagSupport {
 							}else if(col.isAutocomplete()){
 								sb.append(getAutoSpan(col.getField().replaceAll("_","\\."),extendAttribute(col.getExtend())));
 							}else{
-								//update-begin Robin 20140426 for:回车事件 兼容IE,FF
+
 								sb.append("<input onkeypress=\"EnterPress(event)\" onkeydown=\"EnterPress()\"  type=\"text\" name=\""+col.getField().replaceAll("_","\\.")+"\"  "+extendAttribute(col.getExtend())+" style=\"width: 100px\" />");
 							}
 						}else if("group".equals(col.getQueryMode())){
@@ -1029,12 +1027,12 @@ public class DataGridTag extends TagSupport {
 				sb.append(","+column.getExtendParams().substring(0,
 						column.getExtendParams().length()-1));
 			}
-//             update-start-Author:zhangguoming  Date:20140921 for：TASK #458 列表hidden=false，才是隐藏好像有点问题
+
 			// 隐藏字段
 			if (column.isHidden()) {
 				sb.append(",hidden:true");
 			}
-//            update-end-Author:zhangguoming  Date:20140921 for：TASK #458 列表hidden=false，才是隐藏好像有点问题
+
 			if (!treegrid) {
 				// 字段排序
 				if ((column.isSortable()) && (field.indexOf("_") <= 0 && field != "opt")) {
@@ -1181,7 +1179,7 @@ public class DataGridTag extends TagSupport {
 	}
   
 	public String getNoAuthOperButton(){
-		//update-begin--Author:anchao  Date:20140822 for：[bugfree号]字段级权限（表单，列表）--------------------
+
 		StringBuffer sb = new StringBuffer();
 		if(ResourceUtil.getSessionUserName().getUserName().equals("admin")|| !Globals.BUTTON_AUTHORITY_CHECK){
 		}else{
@@ -1207,7 +1205,7 @@ public class DataGridTag extends TagSupport {
 			}
 			
 		}
-		//update-end--Author:anchao  Date:20140822 for：[bugfree号]字段级权限（表单，列表）--------------------
+
 		org.jeecgframework.core.util.LogUtil.info("----getNoAuthOperButton-------"+sb.toString());
 		return sb.toString(); 
 	}

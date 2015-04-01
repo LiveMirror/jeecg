@@ -67,14 +67,14 @@ public class DBTempletLoader implements TemplateLoader {
     }
     
     private Object getObject(String name) throws IOException {
-//        update-start--Author:zhangguoming  Date:20140922 for：根据ftlVersion动态读取模板
+
         String ftlVersion = "";
         String ftlVersionParam = "&ftlVersion=";
         if(name.contains(ftlVersionParam)) {
             ftlVersion = name.substring(name.indexOf(ftlVersionParam) + ftlVersionParam.length());
             name = name.substring(0, name.indexOf(ftlVersionParam));
         }
-//        update-end--Author:zhangguoming  Date:20140922 for：根据ftlVersion动态读取模板
+
     	PathMatchingResourcePatternResolver patternResolver = new PathMatchingResourcePatternResolver();
     	if(name.lastIndexOf(".ftl")==-1){//判断是否为include的模板
 	    	//如果是主表直接走一对多模板
@@ -90,14 +90,14 @@ public class DBTempletLoader implements TemplateLoader {
 			}
 	    	//1、根据table name 查询cgformftl 有则获取模板内容
 	    	//2、没有cgformftl 则查询cgformfield 根据cgformfield生成模板
-//            update-start--Author:zhangguoming  Date:20140922 for：根据ftlVersion动态读取模板
+
 	    	Map<String,Object> cgformFtlEntity = new HashMap<String, Object>();
             if (ftlVersion != null && ftlVersion.length() > 0) {
                 cgformFtlEntity = cgformFtlService.getCgformFtlByTableName(name, ftlVersion);
             } else {
                 cgformFtlEntity = cgformFtlService.getCgformFtlByTableName(name);
             }
-//            update-end--Author:zhangguoming  Date:20140922 for：根据ftlVersion动态读取模板
+
             if(cgformFtlEntity!=null){
 	    		String content = (String) (cgformFtlEntity.get("ftl_content")==null?"":cgformFtlEntity.get("ftl_content"));
 	    		content = initFormHtml( content, name);

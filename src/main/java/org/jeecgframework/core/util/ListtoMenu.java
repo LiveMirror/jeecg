@@ -206,7 +206,6 @@ public class ListtoMenu {
 		return menuString.toString();
 	}
 
-//        update-start--Author:zhangguoming  Date:20140622 for：左侧树调整：加大宽度、更换节点图标、修改选中颜色
 
     /**
      * 拼装EASYUI 多级 菜单  下级菜单为树形
@@ -261,7 +260,7 @@ public class ListtoMenu {
 
 		return menuString.toString();
 	}
-//        update-end--Author:zhangguoming  Date:20140622 for：左侧树调整：加大宽度、更换节点图标、修改选中颜色
+
 
 	/**
 	 * 获取顶级菜单的下级菜单-----面板式菜单
@@ -454,9 +453,7 @@ public class ListtoMenu {
 		menuString.append("		</ul> ");
 		return menuString.toString();
 	}
-	
-	
-	//update-start--Author:gaofeng  Date:2014-02-14：新增webos头部菜单导航,多级菜单
+
 	/**
 	 * 拼装webos头部菜单
 	 * @param pFunctions
@@ -588,10 +585,10 @@ public class ListtoMenu {
 				dataString.append("'"+function.getId()+"':{ ");
 				dataString.append("appid:'"+function.getId()+"',");
 				dataString.append("url:'"+function.getFunctionUrl()+"',");
-                //        update-begin--Author:zhangguoming  Date:20140509 for：添加云桌面图标
+
 //				dataString.append(getIconandName(function.getFunctionName()));
 				dataString.append(getIconAndNameForDesk(function));
-                //        update-end--Author:zhangguoming  Date:20140509 for：添加云桌面图标
+
 				dataString.append("asc :"+function.getFunctionOrder());
 				dataString.append(" },");
 			}
@@ -601,7 +598,6 @@ public class ListtoMenu {
 		return data;
 	}
 
-    //        update-begin--Author:zhangguoming  Date:20140512 for：添加云桌面图标管理
     private static String getIconAndNameForDesk(TSFunction function) {
         StringBuffer dataString = new StringBuffer();
 
@@ -681,6 +677,5 @@ public class ListtoMenu {
 		String lang_context = mutiLangService.getLang(functionName);
 		return lang_context;
 	}
-    //        update-end--Author:zhangguoming  Date:20140512 for：添加云桌面图标管理
-	//update-start--Author:gaofeng  Date:2014-02-14：新增Webos头部菜单导航，多级菜单
+
 }

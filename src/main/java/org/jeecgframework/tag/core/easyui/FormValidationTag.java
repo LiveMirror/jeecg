@@ -168,7 +168,7 @@ public class FormValidationTag extends TagSupport {
 					passsb.append("}");// trigger结尾
 					passsb.append("}");// passwordstrength结尾
 				}
-//				 update-start--Author:gaofeng  Date:20140711 for：修改在使用jptransform时的逗号","拼接错误
+
 				sb.append("usePlugin:{");
 				if (usePlugin.indexOf("password") >= 0) {
 					sb.append(passsb);
@@ -180,7 +180,7 @@ public class FormValidationTag extends TagSupport {
 					}
 					jqsb.append("jqtransform :{selector:\"select\"}");
 				}
-//				update-end--Author:gaofeng  Date:20140711 for：修改在使用jptransform时的逗号","拼接错误
+
 				if (usePlugin.indexOf("jqtransform") >= 0) {
 					sb.append(jqsb);
 				}
@@ -188,8 +188,8 @@ public class FormValidationTag extends TagSupport {
 			}
 			sb.append("callback:function(data){");
 			if (dialog) {
-				if(callback!=null&&callback.contains("@Override")){//复写默认callback
-					sb.append(callback.replaceAll("@Override", "") + "(data);");
+				if(callback!=null&&callback.contains("")){//复写默认callback
+					sb.append(callback.replaceAll("", "") + "(data);");
 				}else{
 					sb.append("var win = frameElement.api.opener;");
 					//先判断是否成功，成功再刷新父页面，否则return false    

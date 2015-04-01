@@ -92,12 +92,11 @@ public class LoginController extends BaseController{
 		DataSourceContextHolder
 				.setDataSourceType(DataSourceType.dataSource_jeecg);
 		AjaxJson j = new AjaxJson();
-        // update-begin--Author:ken  Date:20140629 for：添加语言选择
+
         if (req.getParameter("langCode")!=null) {
         	req.getSession().setAttribute("lang", req.getParameter("langCode"));
         }
-		// update-end--Author:ken  Date:20140629 for：添加语言选择
-//        update-begin--Author:zhangguoming  Date:20140226 for：添加验证码
+
         String randCode = req.getParameter("randCode");
         if (StringUtils.isEmpty(randCode)) {
             j.setMsg(mutiLangService.getLang("common.enter.verifycode"));
@@ -107,7 +106,7 @@ public class LoginController extends BaseController{
             j.setMsg(mutiLangService.getLang("common.verifycode.error"));
             j.setSuccess(false);
         } else {
-//            update-end--Author:zhangguoming  Date:20140226 for：添加验证码
+
             int users = userService.getList(TSUser.class).size();
             
             if (users == 0) {
@@ -115,13 +114,13 @@ public class LoginController extends BaseController{
                 j.setSuccess(false);
             } else {
                 TSUser u = userService.checkUserExits(user);
-//                update-begin--Author:zhangguoming  Date:20140617 for：空指针bug
+
                 if(u == null) {
                     j.setMsg(mutiLangService.getLang("common.username.or.password.error"));
                     j.setSuccess(false);
                     return j;
                 }
-//                update-end--Author:zhangguoming  Date:20140617 for：空指针bug
+
                 TSUser u2 = userService.getEntity(TSUser.class, u.getId());
             
                 if (u != null&&u2.getStatus()!=0) {
@@ -129,7 +128,7 @@ public class LoginController extends BaseController{
                    
                 	
                     if (true) {
-//                        update-start-Author:zhangguoming  Date:20140825 for：处理用户有多个组织机构的情况，以弹出框的形式让用户选择
+
                         Map<String, Object> attrMap = new HashMap<String, Object>();
                         j.setAttributes(attrMap);
 
@@ -148,7 +147,7 @@ public class LoginController extends BaseController{
 
                             saveLoginSuccessInfo(req, u2, orgId);
                         }
-//                        update-end-Author:zhangguoming  Date:20140825 for：处理用户有多个组织机构的情况，以弹出框的形式让用户选择
+
                     } else {
                         j.setMsg(mutiLangService.getLang("common.check.shield"));
                         j.setSuccess(false);
@@ -158,13 +157,12 @@ public class LoginController extends BaseController{
                     j.setSuccess(false);
                 }
             }
-//            update-begin--Author:zhangguoming  Date:20140226 for：添加验证码
+
         }
-//        update-end--Author:zhangguoming  Date:20140226 for：添加验证码
+
 		return j;
 	}
 
-//    update-start-Author:zhangguoming  Date:20140825 for：记录用户登录的相关信息
     /**
      * 保存用户登录的信息，并将当前登录用户的组织机构赋值到用户实体中；
      * @param req request
@@ -187,7 +185,7 @@ public class LoginController extends BaseController{
         // 添加登陆日志
         systemService.addLog(message, Globals.Log_Type_LOGIN, Globals.Log_Leavel_INFO);
     }
-//    update-end-Author:zhangguoming  Date:20140825 for：记录用户登录的相关信息
+
 
     /**
 	 * 用户登录
@@ -211,9 +209,9 @@ public class LoginController extends BaseController{
 			}
             modelMap.put("roleName", roles);
             modelMap.put("userName", user.getUserName());
-            // update-start-Author:zhangguoming  Date:20140914 for：获取当前登录用户的组织机构
+
             modelMap.put("currentOrgName", ClientManager.getInstance().getClient().getUser().getCurrentDepart().getDepartname());
-            // update-end-Author:zhangguoming  Date:20140914 for：获取当前登录用户的组织机构
+
             request.getSession().setAttribute("CKFinder_UserRole", "admin");
 			
 			//request.getSession().setAttribute("lang", "en");
@@ -239,12 +237,11 @@ public class LoginController extends BaseController{
 				return "main/shortcut_main";
 			}
 
-//			update-start--Author:gaofeng  Date:2014-01-24 for:新增首页风格按钮选项
 			if (StringUtils.isNotEmpty(indexStyle)
 					&& indexStyle.equalsIgnoreCase("sliding")) {
 				return "main/sliding_main";
 			}
-//			update-start--Author:gaofeng  Date:2014-01-24 for:新增首页风格按钮选项
+
 			
 			return "main/main";
 		} else {
@@ -308,12 +305,12 @@ public class LoginController extends BaseController{
 		if (loginActionlist.size() > 0) {
 			Collection<TSFunction> allFunctions = loginActionlist.values();
 			for (TSFunction function : allFunctions) {
-			   //update-begin--Author:anchao  Date:20140913 for：菜单过滤--------------------
+
 	            if(function.getFunctionType().intValue()==Globals.Function_TYPE_FROM.intValue()){
 					//如果为表单或者弹出 不显示在系统菜单里面
 					continue;
 				}
-	          //update-end--Author:anchao  Date:20140913 for：菜单过滤--------------------
+
 				if (!functionMap.containsKey(function.getFunctionLevel() + 0)) {
 					functionMap.put(function.getFunctionLevel() + 0,
 							new ArrayList<TSFunction>());
@@ -338,31 +335,30 @@ public class LoginController extends BaseController{
 	private Map<String, TSFunction> getUserFunction(TSUser user) {
 		HttpSession session = ContextHolderUtils.getSession();
 		Client client = ClientManager.getInstance().getClient(session.getId());
-        //update-start--Author:JueYue  Date:2014-5-28 for:风格切换,菜单懒加载失效的问题
+
 		if (client.getFunctions() == null || client.getFunctions().size() == 0) {
-            //update-end--Author:JueYue  Date:2014-5-28 for:风格切换,菜单懒加载失效的问题
+
 			Map<String, TSFunction> loginActionlist = new HashMap<String, TSFunction>();
 			List<TSRoleUser> rUsers = systemService.findByProperty(TSRoleUser.class, "TSUser.id", user.getId());
-//            update-begin--Author:zhangguoming  Date:20140821 for：重构方法体，并加载用户组织机构下角色所拥有的权限
+
 			for (TSRoleUser ru : rUsers) {
 				TSRole role = ru.getTSRole();
                 assembleFunctionsByRole(loginActionlist, role);
 			}
-//            update-start-Author:zhangguoming  Date:20140825 for：获取当前登录用户的组织机构主键
+
             String orgId = client.getUser().getCurrentDepart().getId();
-//            update-end-Author:zhangguoming  Date:20140825 for：获取当前登录用户的组织机构主键
+
             List<TSRoleOrg> orgRoleList = systemService.findByProperty(TSRoleOrg.class, "tsDepart.id", orgId);
             for (TSRoleOrg roleOrg : orgRoleList) {
                 TSRole role = roleOrg.getTsRole();
                 assembleFunctionsByRole(loginActionlist, role);
             }
-//            update-end--Author:zhangguoming  Date:20140821 for：重构方法体，并加载用户组织机构下角色所拥有的权限
+
             client.setFunctions(loginActionlist);
 		}
 		return client.getFunctions();
 	}
 
-//    update-begin--Author:zhangguoming  Date:20140821 for：抽取方法，获取角色下的权限列表
     /**
      * 根据 角色实体 组装 用户权限列表
      * @param loginActionlist 登录用户的权限列表
@@ -372,16 +368,16 @@ public class LoginController extends BaseController{
         List<TSRoleFunction> roleFunctionList = systemService.findByProperty(TSRoleFunction.class, "TSRole.id", role.getId());
         for (TSRoleFunction roleFunction : roleFunctionList) {
             TSFunction function = roleFunction.getTSFunction();
-          //update-begin--Author:anchao  Date:20140822 for：[bugfree号]字段级权限（表单，列表）--------------------
+
             if(function.getFunctionType().intValue()==Globals.Function_TYPE_FROM.intValue()){
 				//如果为表单或者弹出 不显示在系统菜单里面
 				continue;
 			}
-          //update-end--Author:anchao  Date:20140822 for：[bugfree号]字段级权限（表单，列表）--------------------
+
             loginActionlist.put(function.getId(), function);
         }
     }
-//    update-end--Author:zhangguoming  Date:20140821 for：抽取方法，获取角色下的权限列表
+
 
     /**
 	 * 首页跳转
@@ -463,11 +459,11 @@ public class LoginController extends BaseController{
 	public String getPrimaryMenu() {
 		List<TSFunction> primaryMenu = getFunctionMap(ResourceUtil.getSessionUserName()).get(0);
         String floor = "";
-//        update-start--Author:zhangguoming  Date:20140923 for：用户没有任何权限，首页没有退出按钮的bug
+
         if (primaryMenu == null) {
             return floor;
         }
-//        update-end--Author:zhangguoming  Date:20140923 for：用户没有任何权限，首页没有退出按钮的bug
+
         for (TSFunction function : primaryMenu) {
             if(function.getFunctionLevel() == 0) {
 

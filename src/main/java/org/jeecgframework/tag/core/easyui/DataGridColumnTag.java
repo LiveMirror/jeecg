@@ -25,9 +25,9 @@ public class DataGridColumnTag extends TagSupport {
 	protected boolean sortable=true;
 	protected boolean checkbox;
 	protected String formatter;
-//    update-start-Author:zhangguoming  Date:20140921 for：TASK #458 列表hidden=false，才是隐藏好像有点问题
+
 	protected boolean hidden=false;
-//    update-end-Author:zhangguoming  Date:20140921 for：TASK #458 列表hidden=false，才是隐藏好像有点问题
+
 	protected String replace;
 	protected String treefield;
 	protected boolean image;

@@ -34,11 +34,11 @@ public class GZipFilter implements Filter {
       private static boolean isGZipEncoding(HttpServletRequest request){
         boolean flag=false;
         String encoding=request.getHeader("Accept-Encoding");
-          //update-begin--Author:JueYue  Date:20140518 for：IE下Excel上传encode为空的bug--------------------
+
         if(encoding!=null&&encoding.indexOf("gzip")!=-1){
           flag=true;
         }
-          //update-end--Author:JueYue  Date:20140518 for：IE下Excel上传encode为空的bug--------------------
+
          return flag;
       }
       

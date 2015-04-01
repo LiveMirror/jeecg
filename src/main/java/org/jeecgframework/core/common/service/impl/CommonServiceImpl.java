@@ -415,11 +415,10 @@ public class CommonServiceImpl implements CommonService {
 		return commonDao.getCountForJdbc(sql);
 	}
 
-    //update-begin--Author:JueYue  Date:20140514 for：调用方法错误--------------------
 	public Long getCountForJdbcParam(String sql, Object[] objs) {
 		return commonDao.getCountForJdbcParam(sql,objs);
 	}
-    //update-end--Author:JueYue  Date:20140514 for：调用方法错误--------------------
+
 
 	
 	public <T> void batchSave(List<T> entitys) {

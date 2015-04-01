@@ -466,16 +466,15 @@ public class CommonDao extends GenericBaseCommonDao implements ICommonDao, IGene
 				for (Object inobj : in) {
 					ReflectHelper reflectHelper2 = new ReflectHelper(inobj);
 					String inId = oConvertUtils.getString(reflectHelper2.getMethodValue(comboTreeModel.getIdField()));
-					//update-begin--Author:JueYue  Date:20140514 for：==不起作用--------------------
+
                     if (inId.equals(id)) {
 						tree.setChecked(true);
 					}
-                    //update-end--Author:JueYue  Date:20140514 for：==不起作用--------------------
+
 				}
 			}
 		}
 
-//            update-begin--Author:zhangguoming  Date:20140819 for：递归子节点属性
 		List curChildList = (List) reflectHelper.getMethodValue(comboTreeModel.getChildField());
 		if (curChildList != null && curChildList.size() > 0) {
 			tree.setState("closed");
@@ -491,7 +490,7 @@ public class CommonDao extends GenericBaseCommonDao implements ICommonDao, IGene
                 tree.setChildren(children);
             }
         }
-//            update-end--Author:zhangguoming  Date:20140819 for：递归子节点属性
+
 
 		return tree;
 	}
@@ -587,12 +586,12 @@ public class CommonDao extends GenericBaseCommonDao implements ICommonDao, IGene
                     tg.getFieldMap().put(entry.getKey(), fieldValue);
                 }
             }
-            //update-begin--Author:anchao  Date:20140822 for：[bugfree号]字段级权限（表单，列表）--------------------
+
             if (treeGridModel.getFunctionType() != null) {
             	String functionType = oConvertUtils.getString(reflectHelper.getMethodValue(treeGridModel.getFunctionType()));
             	tg.setFunctionType(functionType);
             }
-          //update-end--Author:anchao  Date:20140822 for：[bugfree号]字段级权限（表单，列表）--------------------
+
 			treegrid.add(tg);
 		}
 		return treegrid;

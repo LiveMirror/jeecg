@@ -71,10 +71,10 @@ public class CgFormBuildController extends BaseController {
 		try {
 			long start = System.currentTimeMillis();
 			String tableName =request.getParameter("tableName");
-//            update-start--Author:zhangguoming  Date:20140922 for：根据ftlVersion动态读取模板
+
 			String ftlVersion =request.getParameter("ftlVersion");
 			Template template = templetContext.getTemplate(tableName, ftlVersion);
-//            update-end--Author:zhangguoming  Date:20140922 for：根据ftlVersion动态读取模板
+
 			StringWriter stringWriter = new StringWriter();
 			BufferedWriter writer = new BufferedWriter(stringWriter);
 	        Map<String, Object> data = new HashMap<String, Object>();

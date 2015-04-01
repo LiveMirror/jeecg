@@ -89,7 +89,7 @@ public class TSOperation extends IdEntity implements java.io.Serializable {
 		TSFunction = tSFunction;
 	}
 	
-	@Override
+	
     public boolean equals(Object obj) {  
         if(this == obj)  
             return false;  

@@ -42,14 +42,13 @@ public class BaseTag extends TagSupport {
 			String lang = (String)((HttpServletRequest) this.pageContext.getRequest()).getSession().getAttribute("lang");
 			String langjs = StringUtil.replace("<script type=\"text/javascript\" src=\"plug-in/mutiLang/{0}.js\"></script>", "{0}", lang);
 			sb.append(langjs);
-			
-//            update-begin--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 			if (oConvertUtils.isIn("jquery-webos", types)) {
                 sb.append("<script type=\"text/javascript\" src=\"plug-in/sliding/js/jquery-1.7.1.min.js\"></script>");
 			} else if (oConvertUtils.isIn("jquery", types)) {
 				sb.append("<script type=\"text/javascript\" src=\"plug-in/jquery/jquery-1.8.3.js\"></script>");
 			}
-//            update-end--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 			if (oConvertUtils.isIn("ckeditor", types)) {
 				sb.append("<script type=\"text/javascript\" src=\"plug-in/ckeditor/ckeditor.js\"></script>");
 				sb.append("<script type=\"text/javascript\" src=\"plug-in/tools/ckeditorTool.js\"></script>");

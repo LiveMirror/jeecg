@@ -111,7 +111,7 @@ public class HqlGenerateUtil {
 				// 根据类型分类处理
 				if (type.contains("class java.lang")
 						|| type.contains("class java.math")) {
-					// ------------update--Author:JueYue Date:2014-8-23
+
 					// for：查询拼装的替换
 					if (value != null && !value.equals("")) {
 						HqlRuleEnum rule = PageValueConvertRuleEnum
@@ -125,7 +125,7 @@ public class HqlGenerateUtil {
 						ObjectParseUtil.addCriteria(cq, aliasName,
 								HqlRuleEnum.LE, endValue);
 					}
-					// ------------update--Author:JueYue Date:2014-8-23
+
 					// for：查询拼装的替换
 				} else if ("class java.util.Date".equals(type)) {
 					QueryTimeFormat format = origDescriptors[i].getReadMethod()
@@ -164,7 +164,7 @@ public class HqlGenerateUtil {
 					if (isHaveRuleData(ruleMap, aliasName) ||( isNotEmpty(param)
 							&& itIsNotAllEmpty(param))) {
 						// 如果是实体类,创建别名,继续创建查询条件
-						// ------------update--Author:JueYue Date:20140521
+
 						// for：用户反馈
 						cq.createAlias(aliasName,
 								aliasName.replaceAll("\\.", "_"));

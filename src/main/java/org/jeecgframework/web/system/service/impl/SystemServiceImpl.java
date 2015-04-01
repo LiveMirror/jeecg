@@ -134,9 +134,6 @@ public class SystemServiceImpl extends CommonServiceImpl implements SystemServic
 		}
 	}
 
-	// ----------------------------------------------------------------
-	// ----------------------------------------------------------------
-
 	/**
 	 * 根据角色ID 和 菜单Id 获取 具有操作权限的按钮Codes
 	 * @param roleId
@@ -191,9 +188,6 @@ public class SystemServiceImpl extends CommonServiceImpl implements SystemServic
 		}
 		return operationCodes;
 	}
-
-	// ----------------------------------------------------------------
-	// ----------------------------------------------------------------
 	
 	public void flushRoleFunciton(String id, TSFunction newFunction) {
 		TSFunction functionEntity = this.getEntity(TSFunction.class, id);
@@ -214,12 +208,12 @@ public class SystemServiceImpl extends CommonServiceImpl implements SystemServic
 	}
 
     public String generateOrgCode(String id, String pid) {
-//        update-start--Author:zhangguoming  Date:20140901 for：修改编码长度的定义
+
         int orgCodeLength = 2; // 默认编码长度
         if ("3".equals(ResourceUtil.getOrgCodeLengthType())) { // 类型2-编码长度为3，如001
             orgCodeLength = 3;
         }
-//        update-end--Author:zhangguoming  Date:20140901 for：修改编码长度的定义
+
 
         String  newOrgCode = "";
         if(!StringUtils.hasText(pid)) { // 第一级编码

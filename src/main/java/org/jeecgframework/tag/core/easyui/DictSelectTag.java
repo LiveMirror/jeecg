@@ -104,9 +104,9 @@ public class DictSelectTag extends TagSupport {
 					sb.append(" id=\"" + id + "\"");
 				}
 				sb.append(">");
-				//update-begin--Author:zhangdaihao  Date:20140724 for：[bugfree号]默认选择项目--------------------
+
 				select("common.please.select", "", sb);
-				//update-end--Author:zhangdaihao  Date:20140724 for：[bugfree号]默认选择项目----------------------
+
 				for (Map<String, Object> map : list) {
 					select(map.get("text").toString(), map.get("field").toString(), sb);
 				}
@@ -153,9 +153,9 @@ public class DictSelectTag extends TagSupport {
 						sb.append(" id=\"" + id + "\"");
 					}
 					sb.append(">");
-					//update-begin--Author:zhangdaihao  Date:20140724 for：[bugfree号]默认选择项目--------------------
+
 					select("common.please.select", "", sb);
-					//update-end--Author:zhangdaihao  Date:20140724 for：[bugfree号]默认选择项目----------------------
+
 					for (TSType type : types) {
 						select(type.getTypename(), type.getTypecode(), sb);
 					}

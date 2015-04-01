@@ -15,7 +15,7 @@ public class CategoryServiceImpl extends CommonServiceImpl implements
 
 	private static final String MAX_SQL = "SELECT MAX(code) FROM t_s_category WHERE parent_id";
 
-	@Override
+	
 	public void saveCategory(TSCategoryEntity category) {
 		category.setCode(getCategoryCoade(category));
 		this.save(category);

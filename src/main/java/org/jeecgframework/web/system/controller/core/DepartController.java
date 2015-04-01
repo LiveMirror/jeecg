@@ -104,7 +104,6 @@ public class DepartController extends BaseController {
 		TagUtil.datagrid(response, dataGrid);
 	}
 
-    // update-start--Author:zhangguoming  Date:20140825 for：添加业务逻辑；添加类注释；
 	/**
 	 * 删除部门：
 	 * <ul>
@@ -143,7 +142,7 @@ public class DepartController extends BaseController {
         j.setMsg(message);
 		return j;
 	}
-    // update-end--Author:zhangguoming  Date:20140825 for：添加业务逻辑；添加类注释；
+
 
 	public void upEntity(TSDepart depart) {
 		List<TSUser> users = systemService.findByProperty(TSUser.class, "TSDepart.id", depart.getId());
@@ -332,14 +331,14 @@ public class DepartController extends BaseController {
 		org.jeecgframework.core.extend.hqlsearch.HqlGenerateUtil.installHql(cq, user);
 		String departid = oConvertUtils.getString(request.getParameter("departid"));
 		if (!StringUtil.isEmpty(departid)) {
-//            update-start--Author:zhangguoming  Date:20140825 for：用户表字段变更后的查询字段修改
+
 			DetachedCriteria dc = cq.getDetachedCriteria();
 			DetachedCriteria dcDepart = dc.createCriteria("userOrgList");
 			dcDepart.add(Restrictions.eq("tsDepart.id", departid));
             // 这种方式也是可以的
 //            DetachedCriteria dcDepart = dc.createAlias("userOrgList", "userOrg");
 //            dcDepart.add(Restrictions.eq("userOrg.tsDepart.id", departid));
-//            update-end--Author:zhangguoming  Date:20140825 for：用户表字段变更后的查询字段修改
+
 		}
 		Short[] userstate = new Short[] { Globals.User_Normal, Globals.User_ADMIN };
 		cq.in("status", userstate);
@@ -349,7 +348,6 @@ public class DepartController extends BaseController {
 	}
 	//----
 
-//    update-start--Author:zhangguoming  Date:20140826 for：获取机构树；
     /**
      * 获取机构树-combotree
      * @param request
@@ -366,10 +364,7 @@ public class DepartController extends BaseController {
         comboTrees = systemService.ComboTree(departsList, comboTreeModel, null, true);
         return comboTrees;
     }
-//    update-end--Author:zhangguoming  Date:20140826 for：获取机构树；
 
-
-//    update-start--Author:zhangguoming  Date:20140826 for：添加已有用户到组织机构；
     /**
      * 添加 用户到组织机构 的页面  跳转
      * @param req request
@@ -445,9 +440,7 @@ public class DepartController extends BaseController {
             systemService.batchSave(userOrgList);
         }
     }
-//    update-end--Author:zhangguoming  Date:20140826 for：添加已有用户到组织机构
 
-//    update-start--Author:zhangguoming  Date:20140827 for：用户列表页面 组织机构查询条件：选择组织机构列表 相关操作
     /**
      * 用户选择机构列表跳转页面
      *
@@ -469,5 +462,5 @@ public class DepartController extends BaseController {
         this.systemService.getDataGridReturn(cq, true);
         TagUtil.datagrid(response, dataGrid);
     }
-//    update-end--Author:zhangguoming  Date:20140827 for：用户列表页面 组织机构查询条件：选择组织机构列表 相关操作
+
 }

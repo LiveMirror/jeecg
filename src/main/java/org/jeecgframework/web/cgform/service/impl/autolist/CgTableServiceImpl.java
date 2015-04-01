@@ -138,7 +138,7 @@ public class CgTableServiceImpl extends CommonServiceImpl implements CgTableServ
 				}
 			}
 		}
-		//update-begin--Author:JueYue  Date:20140831 for：onlinecoding 数据权限
+
 		Object dataRuleSql = JeecgDataAutorUtils.loadDataSearchConditonSQLString();//ContextHolderUtils.getRequest().getAttribute(Globals.MENU_DATA_AUTHOR_RULE_SQL);
 		if(dataRuleSql != null && !dataRuleSql.equals("")){
 			if(params.size() == 0) {
@@ -146,7 +146,7 @@ public class CgTableServiceImpl extends CommonServiceImpl implements CgTableServ
 			}
 			sqlB.append(dataRuleSql);
 		}
-		//update-end--Author:JueYue  Date:20140831 for：onlinecoding 数据权限
+
 	}
 
 

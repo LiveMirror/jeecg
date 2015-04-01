@@ -145,7 +145,6 @@ public class ResourceUtil {
 		return DBTypeUtil.getDBType().toLowerCase();
 	}
 
-//    update-begin--Author:zhangguoming  Date:20140226 for：添加验证码
     /**
      * 获取随机码的长度
      *
@@ -163,7 +162,7 @@ public class ResourceUtil {
     public static String getRandCodeType() {
         return bundle.getString("randCodeType");
     }
-//    update-end--Author:zhangguoming  Date:20140226 for：添加验证码
+
 
     /**
      * 获取组织机构编码长度的类型
@@ -180,8 +179,7 @@ public class ResourceUtil {
      * @return
      */
 	public static String getUserSystemData(String key) {
-		 //----------------------------------------------------------------
-		//update-begin--Author:zhangdaihao  Date:20140913 for：获取系统上下文变量
+
 	
 		//替换为系统的登录用户账号
 //		if (key.equals(DataBaseConstant.CREATE_BY)
@@ -203,9 +201,6 @@ public class ResourceUtil {
 			) {
 			return getSessionUserName().getRealName();
 		}
-		
-		//update-end--Author:zhangdaihao  Date:20140913 for：获取系统上下文变量
-		//---------------------------------------------------------------- 
 		//替换为系统登录用户的公司编码
 		if (key.equals(DataBaseConstant.SYS_COMPANY_CODE)|| key.equals(DataBaseConstant.SYS_COMPANY_CODE_TABLE)) {
 			return getSessionUserName().getCurrentDepart().getOrgCode()

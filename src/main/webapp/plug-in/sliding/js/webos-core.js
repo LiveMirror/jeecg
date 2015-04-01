@@ -11,7 +11,7 @@ var menujson=null;
 var datajson=null;
 var iconjson=null;
 var totalnum =null;
-//update-begin--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 var iconCookieKey = "iconCookieKey";
 var iconCookieKeyForSlider = "iconCookieKeyForSlider";
 var cookieParam = {expires: 30};
@@ -20,7 +20,7 @@ var defaultIconForSlider = [
 //    '297e20104620167201462016b5fe001f',/*用户管理*/
 //    '297e20104620167201462016b6020021' /*角色管理*/
 ];
-//update-end--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 	//增加数据动态处理的过程
 	////这里使用menuString来替换掉每个一级二级菜单的数据
 
@@ -49,7 +49,6 @@ function dataFlush(){
     });
 }
 
-//update-begin--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
 /**
  * 转换用户的桌面
  */
@@ -107,7 +106,7 @@ function calcuIconJson() {
         iconjson = tempIconJson;
     }
 }
-//update-end--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 
 $(function() {
 
@@ -115,13 +114,13 @@ $(function() {
 //	dataFlush();
 	Desktop.init();
 	//替换icon的数组内容
-//    update-begin--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 //	Deskpanel.init(iconjson).refresh();
 	Deskpanel.init(iconjson, true);
-//    update-end--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 	Sidebar.init({
 		location:'left',//初始化sidebar的位置为左侧
-//        update-begin--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
         Icon:defaultIconForSlider
 		/*Icon:[
 			'appmarket',
@@ -131,7 +130,7 @@ $(function() {
 			'internet',
 			'qq'
 		]*/
-//        update-end--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 	});
 	Navbar.init();//初始化导航条	
 	BottomBar.init();//初始化下部栏
@@ -458,7 +457,7 @@ Deskpanel = function(me){
 			me.refreshIcon(firstLoad);
 			
 		},
-//        update-begin--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 		refreshIcon:function(firstLoad){//刷新应用
 			var r = ~~(me.height/112);
             var curIndex = 1;
@@ -495,7 +494,7 @@ Deskpanel = function(me){
                 $.cookie(iconCookieKeyForSlider, iconCookieDataForSlider, cookieParam);
             }
 		},
-//        update-end--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 		moveIconTo:function(icon,idx2){//目标位置
 			var ids=(Panel.getIdx(icon.box));
 			if(idx>idx2){//往前移
@@ -638,7 +637,7 @@ Sidebar=function(me){
 		 },		 
 		 createStartTool:function(){//开始设置
 			me.start = $("<a title='点击这里开始' class='dock_tool_icon dock_tool_start'	href='javascript:void(0);'></a>");
-             //update-end--Author:JueYue  Date:20140511 for：点击两次才才显示的bug
+
             me.start.powerFloat({
                  eventType: "click",
                  offsets:{x:getX,y:-100},
@@ -657,7 +656,7 @@ Sidebar=function(me){
                     return 60;
                  }
              }
-             //update-end--Author:JueYue  Date:20140511 for：点击两次才才显示的bug
+
 		 },
 		 createPinyinTool :function(){//输入法
 			me.pinyin =$(Util.formatmodel(tool_a,{
@@ -705,18 +704,18 @@ Sidebar=function(me){
 						content :document.getElementById("themeSetting_wrap")
 					});
 			 });
-			 //update-end--Author:gaofeng  Date:20140615 for：云桌面主题功能修复
+
 			 $("a",themsSetting).live("click",function(){
-			 //update-end--Author:gaofeng  Date:20140615 for：云桌面主题功能修复
+
 					var a  = $(this);
 					var themeid = a.attr("themeid");
 					var src = themeid.substring(themeid.indexOf("_")+1,themeid.length);
 					var h = $(window).height();
 					var w = $(window).width();
 					$("#zoomWallpaper").attr("src","plug-in/sliding/images/bg/"+src+".jpg").width(w).height(h);
-//					update-end--Author:gaofeng  Date:20140617 for：保存主题背景到cookie中不消失
+
 					$.cookie("myskin","plug-in/sliding/images/bg/"+src+".jpg",cookieParam);
-//					update-end--Author:gaofeng  Date:20140617 for：保存主题背景到cookie中不消失
+
 					$("#zoomWallpaperGrid").width(w).height(h);
 					$("a",themsSetting).removeClass("themeSetting_selected");
 					a.addClass("themeSetting_selected");
@@ -947,11 +946,11 @@ Navbar =function(me){
 			});			
 			var pagelet_search_suggest =$("<div class='pagelet_search_suggest' id='pagelet_search_suggest'style='display: none;' ></div>");
 			var sb_resultbox = $("<ul id='sb_resultBox'  style='display: block;'></ul>");
-//			update-end--Author:gaofeng  Date:20140615 for：云桌面搜索框屏蔽掉多余的展示内容
+
 			var sb_app_item_1 =$("<div idx='-1' class='sb_resultList fsb_resultList sb_page'><a href='#'><span class='sb_pageTxt'><span id='sb_resultBox_key' class='sb_resultBox_key'>s</span>-在“百度”搜索...</span></a>  </div>");		
 			var sb_app_item_2 = $("<div idx='-2' class='sb_resultList fsb_resultList sb_app'><a href='#'><span class='sb_appTxt'><span id='sb_resultBox_key'  class='sb_resultBox_key'>s</span>-去系统应用搜搜...</span></a></div>");
 			pagelet_search_suggest.append(sb_resultbox).append(sb_app_item_1).append(sb_app_item_2);			
-//			update-end--Author:gaofeng  Date:20140615 for：云桌面搜索框屏蔽掉多余的展示内容
+
 			pagelet_search_bar.append(pageletSearchInput).append(pageletSearchButton);	
 			
 			Body.addPanel(pagelet_search_bar);
@@ -978,12 +977,12 @@ Navbar =function(me){
 				$(this).val("");				
 			}).blur(function(){
 				toggleSearchSuggest();	
-		        //update-end--Author:gaofeng  Date:20140614 for：云桌面搜索菜单，点击进入功能,搜索可直接连接到百度
+
 				var searchhtnl=$(this).val();
 				$(this).val("搜索功能模块和应用...");
 				
 				$(".fsb_resultList").show();
-		        //update-end--Author:gaofeng  Date:20140614 for：云桌面搜索菜单，点击进入功能,搜索可直接连接到百度
+
 			}).keyup(function(){
 				var _this = $(this);
 				var _val = _this.val();
@@ -1054,10 +1053,10 @@ appManagerPanel = function(me){
 	var aMg_line_y = "<div class='aMg_line_y'></div>";//y轴线
 	var aMg_App_container = "<div class='aMg_folder_container'></div>";//应用容器
 	var folderitem ="<div class='folderItem'><div class='folder_bg folder_bg{key}'></div><div class='folderOuter' index='{index}' customacceptdrop='{key}'></div></div>";
-//    update-begin--Author:zhangguoming  Date:20140605 for：云桌面全局视图，菜单区内容的高度bug修复（有滚动条时，最后一个菜单被windows底部菜单栏遮盖的bug）
+
 //	var folderinner ="<div class='folderInner' style='height: 100%; overflow-x: hidden; overflow-y: hidden; ' index='{index}' customacceptdrop='{key}'></div>";
 	var folderinner ="<div class='folderInner' style='height: 90%; overflow-x: hidden; overflow-y: hidden; ' index='{index}' customacceptdrop='{key}'></div>";
-//    update-end--Author:zhangguoming  Date:20140605 for：云桌面全局视图，菜单区内容的高度bug修复（有滚动条时，最后一个菜单被windows底部菜单栏遮盖的bug）
+
 	var scrollBar ="<div class='scrollBar' style='margin-top: 0px; height: 0px; display: none;' _olddisplay='block'></div>";
 
 	return me = {
@@ -1371,7 +1370,7 @@ Windows = function(me){
 			var taskIds = BottomBar.getALLItemID();
 			var taskLen = taskIds.length;
 			var api=array[id];
-            //update-end--Author:JueYue  Date:20140511 for：底下菜单点击不消失的bug
+
             function changeLhgDialogFocus() {
                 var foucsApi = null;
                 for(var obj in $.dialog.list){
@@ -1419,7 +1418,7 @@ Windows = function(me){
 				}
 				
 			}
-            //update-end--Author:JueYue  Date:20140511 for：底下菜单点击不消失的bug
+
 		},
 		hideWindow :function(id){//隐藏
             $.dialog.list[id].hide();
@@ -1465,13 +1464,13 @@ Windows = function(me){
 					me.showWindow(id);	  
 					BottomBar.setCurrent(task.box.attr("id"));
 				});
-                //update-end--Author:JueYue  Date:20140425 for：统一弹出插件
+
                 $.dialog({
                     id:id,
                     lock : false,
-//                    update-end--Author:gaofeng  Date:20140616 for：云桌面修复弹窗的多重覆盖问题
+
                     zIndex:1000+getDialogLength(),
-//                    update-end--Author:gaofeng  Date:20140616 for：云桌面修复弹窗的多重覆盖问题
+
                     width:width,
                     height:height,
                     title:title,
@@ -1482,7 +1481,7 @@ Windows = function(me){
                         me.closeMinTask(id);
                     }
                 }).zindex();
-                //update-end--Author:JueYue  Date:20140425 for：统一弹出插件
+
 
 				/*art.dialog.open(url,*//** 弹出ART窗体*//*
 					{
@@ -1548,9 +1547,9 @@ appIcon_amg1 = appIcon_amg.extend({
 			appid:this.app.appid,
 			fileid : this.app.appid,
 			title:this.app.name,
-//            update-begin--Author:zhangguoming  Date:20140605 for：云桌面全局视图，添加菜单点击功能（弹出菜单后，关闭全局视图并返回桌面）
+
             url: this.app.url,
-//            update-end--Author:zhangguoming  Date:20140605 for：云桌面全局视图，添加菜单点击功能（弹出菜单后，关闭全局视图并返回桌面）
+
 			uid :"app_"+this.app.appid
 		});
 		
@@ -1592,7 +1591,7 @@ appIcon_amg1 = appIcon_amg.extend({
 		this.box.append(appIcon).append(nameDiv).append(notify).append(deleteDiv);
 	},
 	bindEvent:function(){
-//        update-begin--Author:zhangguoming  Date:20140605 for：云桌面全局视图，添加菜单点击功能（弹出菜单后，关闭全局视图并返回桌面）
+
         this.box.click(function(e){
             e.preventDefault();
             e.stopPropagation();
@@ -1605,7 +1604,7 @@ appIcon_amg1 = appIcon_amg.extend({
 
             appManagerPanel.hide();
             Desktop.show();
-//            update-end--Author:zhangguoming  Date:20140605 for：云桌面全局视图，添加菜单点击功能（弹出菜单后，关闭全局视图并返回桌面）
+
         });
 	}	
 		
@@ -1705,10 +1704,10 @@ appIcon_t2 = appIcon_t0.extend({
 			appid:this.sApp.appid,
 			fileid : this.sApp.appid,
 			title:this.sApp.name,
-//            update-begin--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 			uid :"app_"+this.sApp.appid,
             url:this.sApp.url
-//            update-end--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 		});
 		
 		var appIcon =$("<div>",{
@@ -1717,10 +1716,10 @@ appIcon_t2 = appIcon_t0.extend({
 		});
 		appIcon.append($("<img>",{
 			alt:this.sApp.name ,
-//            update-begin--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 //			src:'plug-in/sliding/icon/'+this.sApp.icon,
 			src:this.sApp.icon,
-//            update-end--Author:zhangguoming  Date:20140521 for：云桌面图标拖拽、用户自定义桌面
+
 			"class":"appButton_appIconImg",
 			id:'icon_app_'+this.sApp.appid+'_'+this.sApp.asc+'_img'
 		
@@ -1755,7 +1754,7 @@ appIcon_t2 = appIcon_t0.extend({
 		});
 	}
 });
-//update-end--Author:gaofeng  Date:20140618 for：修改搜索的功能为两部分：一个是直接嵌入百度搜索，另一个为网站内的菜单搜索
+
 $(function(){
 	$(".fsb_resultList").live("click",function(){
 		
@@ -1770,8 +1769,6 @@ $(function(){
 		$(".fsb_resultList").hide();
 	})
 
-//	update-end--Author:gaofeng  Date:20140618 for：修改搜索的功能为两部分：一个是直接嵌入百度搜索，另一个为网站内的菜单搜索
-//	update-end--Author:gaofeng  Date:20140617 for：保存主题背景到cookie中不消失
 	  var mychangeskin=$.cookie("myskin");
 	
 	  if(mychangeskin)
@@ -1779,7 +1776,7 @@ $(function(){
 			 $("#zoomWallpaper").attr("src",mychangeskin);
 			 $.cookie("myskin",mychangeskin,cookieParam);//1为关掉浏览器不消失效果，0为消失
 		 }
-//	  update-end--Author:gaofeng  Date:20140617 for：保存主题背景到cookie中不消失
+
 	
 })
 

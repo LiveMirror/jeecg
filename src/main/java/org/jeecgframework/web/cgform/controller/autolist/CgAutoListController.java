@@ -193,9 +193,9 @@ public class CgAutoListController extends BaseController{
 //						}
 						for(DictEntity dictEntity:dicDataList){
 							if(value.equalsIgnoreCase(dictEntity.getTypecode())){
-								//------------------update-begin------for:-国际化处理-----------------------author:zhagndaihao------------
+
 								r.put(bean.getFieldName(),MutiLangUtil.getMutiLangInstance().getLang(dictEntity.getTypename()));
-								//------------------update-end-----for:-国际化处理----------------------------author:zhagndaihao---------
+
 							}
 						}
 					}
@@ -266,7 +266,7 @@ public class CgAutoListController extends BaseController{
 		List<Map> queryList = new ArrayList<Map>();
 		StringBuilder fileds = new StringBuilder();
 		StringBuilder initQuery = new StringBuilder();
-		//------------------update-begin-------2014年9月3日----author:JueYue------for:-列表数据隐藏权限------------
+
 		Set<String> operationCodes = (Set<String>) request.getAttribute(Globals.OPERATIONCODES);
 		Map<String,TSOperation> operationCodesMap = new HashMap<String, TSOperation>();
 		if(operationCodes != null){
@@ -282,7 +282,7 @@ public class CgAutoListController extends BaseController{
 			if(operationCodesMap.containsKey(bean.getFieldName())) {
 				continue;
 			}
-			//------------------update-end---2014年9月3日----author:JueYue------for:-列表数据隐藏权限------------
+
 			Map fm = new HashMap<String, Object>();
 			fm.put(CgAutoListConstant.FILED_ID, bean.getFieldName());
 			fm.put(CgAutoListConstant.FIELD_TITLE, bean.getContent());
