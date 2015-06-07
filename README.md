@@ -131,6 +131,6 @@ JEECG 功能特点
     
 技术交流
 -----------------------------------
-* 	作者：张代浩</br>
+* 	作者：[张代浩](http://www.jeecg.org/forum.php?mod=viewthread&tid=1047)</br>
 * 	邮箱：jeecg@sina.com</br>
 * 	QQ交流群： 106259349</br>
