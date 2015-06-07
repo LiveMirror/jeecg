@@ -124,9 +124,8 @@ JEECG 功能特点
 
 技术文档
 -----------------------------------
-* [JEECG 入门视频](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
-* [JEECG 历史版本](http://www.jeecg.org/forum.php?mod=viewthread&tid=1229&page=1&extra=#pid3642)
-* [JEECG 文档](http://osbaba.com:8002/display/12/Home)
+* [JEECG 开发入门视频](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
+* [JEECG 历史版本下载](http://www.jeecg.org/forum.php?mod=viewthread&tid=1229&page=1&extra=#pid3642)
     
 技术交流
 -----------------------------------
