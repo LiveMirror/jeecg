@@ -124,13 +124,13 @@ JEECG 功能特点
 
 技术文档
 -----------------------------------
+* [JEECG 技术论坛](http://www.jeecg.org)
 * [JEECG 开发入门视频](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
-* [JEECG 历史版本下载](http://www.jeecg.org/forum.php?mod=viewthread&tid=1229&page=1&extra=#pid3642)
+* [JEECG 在线演示](http://demo.jeecg.org:8080)
+
     
 技术交流
 -----------------------------------
 * 	作者：张代浩</br>
-* 	邮箱：jeecg@sina.com
-* 	论坛：[www.jeecg.org](http://www.jeecg.org)
-* 	交流群:106259349, 106838471, 289782002</br>
-* 	在线演示: [在线演示](http://demo.jeecg.org:8080)
+* 	邮箱：jeecg@sina.com</br>
+* 	JEECG技术群① 106259349</br>
