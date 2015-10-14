@@ -125,9 +125,10 @@ JEECG 功能特点
 技术文档
 -----------------------------------
 * [JEECG 开发入门搭建文档（Maven版）](http://www.jeecg.org/forum.php?mod=viewthread&tid=2537&extra=page%3D1)
-* [JEECG 技术论坛](http://www.jeecg.org)
 * [JEECG 开发入门视频](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
+* [JEECG 平台开发手册下载](http://www.jeecg.org/forum.php?mod=viewthread&tid=2764&page=1&extra=#pid7391)
 * [JEECG 在线演示](http://demo.jeecg.org)
+* [JEECG 技术论坛 - 更多资料](http://www.jeecg.org)
 
 
 - 福利贴 -
