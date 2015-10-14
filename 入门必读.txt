@@ -1,0 +1,13 @@
+1. 标准开发环境：eclipse + maven + jdk7 + tomcat7 + mysql
+2. 必须手工执行SQL脚本 (自动初始化的方式已作废)
+    doc\db\jeecg_mysql_3.5.2-20150607.sql
+	说明：目前社区只提供mysql脚本一种，其他数据库大家可以通过navicat自己转化
+	       具体方法参考:http://www.jeecg.org/forum.php?mod=viewthread&tid=2746&extra=page%3D2
+3. Maven下载有问题，可以下载社区提供本地maven仓库,配置在本地
+    链接: http://pan.baidu.com/s/1mgL16vm 密码: 2f6e
+4.  jeecg平台开发手册下载
+    链接: http://pan.baidu.com/s/18KtK6 密码: og2h
+5.  jeecg入门视频下载
+    http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1
+
+   注意： 不支持jdk8;必须手工执行doc\db下的数据库脚本	
