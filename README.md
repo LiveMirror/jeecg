@@ -1,7 +1,7 @@
 JEECG Î¢ÔÆ¿ìËÙ¿ª·¢Æ½Ì¨
 ===============
 
-µ±Ç°×îÐÂ°æ±¾£º 3.6£¨·¢²¼ÈÕÆÚ£º20150607£©
+µ±Ç°×îÐÂ°æ±¾£º 3.6£¨·¢²¼ÈÕÆÚ£º20151204£©
 
 Ç°ÑÔ£º
 -----------------------------------
@@ -35,6 +35,7 @@ JEECG×ÚÖ¼ÊÇ: ¼òµ¥¹¦ÄÜÓÉ´úOnline CodingÅäÖÃ³ö¹¦ÄÜ;¸´ÔÓ¹¦ÄÜÓÉ´úÂëÉú³ÉÆ÷Éú³É½øÐÐÊÖ¹
 * 14.¶àÖÖÊ×Ò³·ç¸ñÇÐ»»,Ö§³Ö×Ô¶¨ÒåÊ×Ò³·ç¸ñ¡££¨¾­µä·ç¸ñ¡¢Shortcut·ç¸ñ¡¢ACE bootstrap·ç¸ñ¡¢ÔÆ×ÀÃæ·ç¸ñ£©
 * 15.ÔÚÏßÅäÖÃ±¨±í£¨ÎÞÐè±àÂë£¬Í¨¹ýÔÚÏßÅäÖÃ·½Ê½£¬ÊµÏÖÇúÏßÍ¼£¬Öù×´Í¼£¬Êý¾ÝµÈ±¨±í£©
 * 16.¼òÒ×Excelµ¼Èëµ¼³ö£¬Ö§³Öµ¥±íµ¼³öºÍÒ»¶Ô¶à±íÄ£Ê½µ¼³ö£¬Éú³ÉµÄ´úÂë×Ô´øµ¼Èëµ¼³ö¹¦ÄÜ
+* 17.×Ô¶¨Òå±íµ¥£¬Ö§³ÖÓÃ»§×Ô¶¨Òå±íµ¥²¼¾Ö£¬Ö§³Öµ¥±í£¬Ò»¶Ô¶à±íµ¥¡¢Ö§³Öselect¡¢radio¡¢checkbox¡¢textarea¡¢date¡¢popup¡¢ÁÐ±í¡¢ºêµÈ¿Ø¼þ
 
 JEECG ÊÊÓÃ·¶Î§
 -----------------------------------
@@ -126,17 +127,9 @@ JEECG ¹¦ÄÜÌØµã
 -----------------------------------
 * [JEECG ¿ª·¢ÈëÃÅ´î½¨ÎÄµµ£¨Maven°æ£©](http://www.jeecg.org/forum.php?mod=viewthread&tid=2537&extra=page%3D1)
 * [JEECG ¿ª·¢ÈëÃÅÊÓÆµ](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
-* [JEECG Æ½Ì¨¿ª·¢ÊÖ²áÏÂÔØ](http://www.jeecg.org/forum.php?mod=viewthread&tid=2764&page=1&extra=#pid7391)
 * [JEECG ÔÚÏßÑÝÊ¾](http://demo.jeecg.org)
 * [JEECG ¼¼ÊõÂÛÌ³ - ¸ü¶à×ÊÁÏ](http://www.jeecg.org)
 
-
-- ¸£ÀûÌù -
------------------------------------
-* ×ÊÔ´1£º ÊÜMavenÕÛÄ¥µÄÍ¬Ñ§À´¸£ÀûÁË£¬Eclipse·Çmaven°æ±¾ÏÂÔØµØÖ·
-* JEECG ¿ª·¢Æ½Ì¨(V3ÏµÁÐ-NEW)
-* JEEWXÎ¢ÐÅ¹Ü¼ÒÏµÍ³£¨V2ÏµÁÐ-NEW£©
-* [ÏÂÔØµØÖ·](http://www.jeecg.org/forum.php?mod=viewthread&tid=1229&extra=page%3D1)
 
     
 ¼¼Êõ½»Á÷
