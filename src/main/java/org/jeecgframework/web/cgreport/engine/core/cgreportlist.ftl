@@ -4,7 +4,7 @@ $(function(){$('#${config_id}List').datagrid(
 	{
 	idField: 'id',
 	title: '${config_name}',
-	url:'cgReportController.do?datagrid&configId=${config_id}',
+	url:'cgReportController.do?datagrid&configId=${config_id}${config_params}',
 	fit:true,
 	fitColumns:false,
 	pageSize: 10,
