@@ -92,6 +92,8 @@ JEECG 功能特点
 ![github](http://www.jeecg.org/data/attachment/forum/201303/02/124748gyhrgvr45vshyc82.jpg "jeecg")
 ![github](http://www.jeecg.org/data/attachment/forum/201303/02/123428ubcjjnuwjbkjrnrw.jpg "jeecg")
 ![github](http://www.jeecg.org/data/attachment/forum/201303/02/124749up2j5id7gj9kppp8.jpg "jeecg")
+![github](http://www.jeecg.org/data/attachment/forum/201512/04/134247w8vtnrmnrrztgiwb.png "jeecg")
+
 
 
 
