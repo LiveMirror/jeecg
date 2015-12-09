@@ -22,7 +22,7 @@ $(function(){$('#${config_id}List').datagrid(
 					 	<#if x_has_next>
 						{field:'${x['field_name']}',
 						 title:'${x['field_txt']}',
-					 	 <#if x['field_href'] != "">
+					 	 <#if x['field_href']?? && x['field_href']!="">
 						 	formatter:function(value,rec,index){
 						 		var href='';
 						 		href+=applyHref('字段链接','${x['field_href']}',value,rec,index);
