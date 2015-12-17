@@ -94,8 +94,11 @@ JEECG 功能特点
 ![github](http://www.jeecg.org/data/attachment/forum/201303/02/124749up2j5id7gj9kppp8.jpg "jeecg")
 ![github](http://www.jeecg.org/data/attachment/forum/201512/04/134247w8vtnrmnrrztgiwb.png "jeecg")
 
-
-
+自定义表单设计布局效果
+![github](http://www.jeecg.org/data/attachment/forum/201512/17/175056vgzo2j2thph29jdp.jpg "jeecg")
+![github](http://www.jeecg.org/data/attachment/forum/201512/17/175135xq9fwiun3pi6i4e6.jpg "jeecg")
+![github](http://www.jeecg.org/data/attachment/forum/201512/17/175152r6eg2f15g58jzzej.png "jeecg")
+![github](http://www.jeecg.org/data/attachment/forum/201512/17/175103v1r87337prnfr1du.jpg "jeecg")
 
 代码示例
 -----------------------------------
