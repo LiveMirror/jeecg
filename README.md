@@ -1,7 +1,7 @@
 JEECG Î¢ÔÆ¿ìËÙ¿ª·¢Æ½Ì¨
 ===============
 
-µ±Ç°×îÐÂ°æ±¾£º 3.6£¨·¢²¼ÈÕÆÚ£º20151204£©
+µ±Ç°×îÐÂ°æ±¾£º 3.6.2£¨·¢²¼ÈÕÆÚ£º20160315£©
 
 Ç°ÑÔ£º
 -----------------------------------
@@ -16,6 +16,9 @@ JEECG£¨J2EE Code Generation£©ÊÇÒ»¿î»ùÓÚ´úÂëÉú³ÉÆ÷µÄÖÇÄÜ¿ª·¢Æ½Ì¨¡£ÒýÁìÐÂµÄ¿ª·¢Ä£Ê
 
 JEECG×ÚÖ¼ÊÇ: ¼òµ¥¹¦ÄÜÓÉ´úOnline CodingÅäÖÃ³ö¹¦ÄÜ;¸´ÔÓ¹¦ÄÜÓÉ´úÂëÉú³ÉÆ÷Éú³É½øÐÐÊÖ¹¤Merge; ¸´ÔÓÁ÷³ÌÒµÎñ²ÉÓÃ±íµ¥×Ô¶¨Òå£¬ÒµÎñÁ÷³ÌÊ¹ÓÃ¹¤×÷Á÷À´ÊµÏÖ¡¢À©Õ¹³öÈÎÎñ½Ó¿Ú£¬¹©¿ª·¢±àÐ´ÒµÎñÂß¼­¡£ÊµÏÖÁËÁ÷³ÌÈÎÎñ½ÚµãºÍÈÎÎñ½Ó¿ÚµÄÁé»îÅäÖÃ£¬¼È±£Ö¤ÁË¹«Ë¾Á÷³ÌµÄ±£ÃÜÐÐ£¬ÓÖ¼õÉÙÁË¿ª·¢ÈËÔ±µÄ¹¤×÷Á¿¡£
 
+ÊÊÓÃÏîÄ¿
+-----------------------------------
+JEECG¿ìËÙ¿ª·¢Æ½Ì¨£¬¿ÉÒÔÓ¦ÓÃÔÚÈÎºÎJ2EEÏîÄ¿µÄ¿ª·¢ÖÐ£¬ÓÈÆäÊÊºÏÆóÒµÐÅÏ¢¹ÜÀíÏµÍ³£¨MIS£©¡¢ÄÚ²¿°ì¹«ÏµÍ³£¨OA£©¡¢ÆóÒµ×ÊÔ´¼Æ»®ÏµÍ³£¨ERP£©¡¢¿Í»§¹ØÏµ¹ÜÀíÏµÍ³£¨CRM£©µÈ£¬Æä°ëÖÇÄÜÊÖ¹¤MergeµÄ¿ª·¢·½Ê½£¬¿ÉÒÔÏÔÖøÌá¸ß¿ª·¢Ð§ÂÊ70%ÒÔÉÏ£¬¼«´ó½µµÍ¿ª·¢³É±¾£»JEECGÓÈÎªÏÔÖøµÄÖ§³ÖSAASÆóÒµ¼¶Ó¦ÓÃ¿ª·¢£¬²å¼þ»úÖÆ¸üºÃµÄÖ§³ÖÁËSAASÔÆÓ¦ÓÃÐèÇó¡£
 
 ÎªÊ²Ã´Ñ¡ÔñJEECG?
 -----------------------------------
@@ -26,7 +29,7 @@ JEECG×ÚÖ¼ÊÇ: ¼òµ¥¹¦ÄÜÓÉ´úOnline CodingÅäÖÃ³ö¹¦ÄÜ;¸´ÔÓ¹¦ÄÜÓÉ´úÂëÉú³ÉÆ÷Éú³É½øÐÐÊÖ¹
 * 5.³£ÓÃ¹²Í¨·â×°£¬¸÷ÖÖ¹¤¾ßÀà(¶¨Ê±ÈÎÎñ,¶ÌÐÅ½Ó¿Ú,ÓÊ¼þ·¢ËÍ,Excelµ¼³öµÈ),»ù±¾Âú×ã80%ÏîÄ¿ÐèÇó
 * 6.¼¯³É¼òÒ×±¨±í¹¤¾ß£¬Í¼Ïñ±¨±íºÍÊý¾Ýµ¼³ö·Ç³£·½±ã£¬¿É¼«Æä·½±ãµÄÉú³Épdf¡¢excel¡¢wordµÈ±¨±í£»
 * 7.¼¯³É¹¤×÷Á÷activiti£¬²¢ÊµÏÖÁËÖ»ÐèÔÚÒ³ÃæÅäÖÃÁ÷³Ì×ªÏò£¬¿É¼«´óµÄ¼ò»¯jbpm¹¤×÷Á÷µÄ¿ª·¢£»ÓÃjbpmµÄÁ÷³ÌÉè¼ÆÆ÷»­³öÁËÁ÷³Ì×ßÏò£¬Ò»¸ö¹¤×÷Á÷»ù±¾¾ÍÍê³ÉÁË£¬Ö»ÐèÐ´ºÜÉÙÁ¿µÄjava´úÂë£»
-* 8.UI¿ìËÙ¿ª·¢¿â£¬Õë¶ÔWEB UI½øÐÐ±ê×¼Ê½·â×°£¬Ò³ÃæÍ³Ò»²ÉÓÃ×Ô¶¨Òå±êÇ©ÊµÏÖ¹¦ÄÜ£ºÁÐ±íÊý¾ÝÕ¹ÏÖ¡¢Ò³ÃæÐ£ÑéµÈ,±êÇ©Ê¹ÓÃ¼òµ¥ÇåÎúÇÒ±ãÓÚÎ¬»¤
+* 8.UI±êÇ©¿â£¬Õë¶ÔWEB UI½øÐÐ±ê×¼Ê½·â×°£¬Ò³ÃæÍ³Ò»²ÉÓÃ×Ô¶¨Òå±êÇ©ÊµÏÖ¹¦ÄÜ£ºÁÐ±íÊý¾ÝÕ¹ÏÖ¡¢Ò³ÃæÐ£ÑéµÈ,±êÇ©Ê¹ÓÃ¼òµ¥ÇåÎúÇÒ±ãÓÚÎ¬»¤
 * 9.ÔÚÏßÁ÷³ÌÉè¼Æ£¬²ÉÓÃ¿ªÔ´ActivitiÁ÷³ÌÒýÇæ£¬ÊµÏÖÔÚÏß»­Á÷³Ì,×Ô¶¨Òå±íµ¥,±íµ¥¹Ò¿¿,ÒµÎñÁ÷×ª
 * 10.²éÑ¯¹ýÂËÆ÷£º²éÑ¯¹¦ÄÜ×Ô¶¯Éú³É£¬ºóÌ¨¶¯Ì¬Æ´SQL×·¼Ó²éÑ¯Ìõ¼þ£»Ö§³Ö¶àÖÖÆ¥Åä·½Ê½£¨È«Æ¥Åä/Ä£ºý²éÑ¯/°üº¬²éÑ¯/²»Æ¥Åä²éÑ¯£©£»
 * 11.¶àÊý¾ÝÔ´£º¼°Æä¼òÒ×µÄÊ¹ÓÃ·½Ê½£¬ÔÚÏßÅäÖÃÊý¾ÝÔ´ÅäÖÃ£¬±ã½ÝµÄ´ÓÆäËûÊý¾Ý×¥È¡Êý¾Ý£»
@@ -45,11 +48,11 @@ JEECGÖÇÄÜ¿ª·¢Æ½Ì¨£¬¿ÉÒÔÓ¦ÓÃÔÚÈÎºÎJ2EEÏîÄ¿µÄ¿ª·¢ÖÐ£¬ÓÈÆäÊÊºÏÆóÒµÐÅÏ¢¹ÜÀíÏµÍ³£¨MIS
 
 JEECG ¹¦ÄÜÌØµã
 -----------------------------------
-* 	SpringMvc + Hibernate + UI±êÇ©¿â + Minidao + Easyui + Easypoi + Highcharts + Ehcache µÈ»ù´¡¼Ü¹¹</br>
+* 	²ÉÓÃSpringMVC + Hibernate + Minidao(ÀàMybatis) + Easyui(UI¿â)+ Jquery + Boostrap + Ehcache + Redis + ZtreeµÈ»ù´¡¼Ü¹¹</br>
 * 	²ÉÓÃÃæÏòÉùÃ÷µÄ¿ª·¢Ä£Ê½£¬ »ùÓÚ·ºÐÍ±àÐ´¼«ÉÙ´úÂë¼´¿ÉÊµÏÖ¸´ÔÓµÄÊý¾ÝÕ¹Ê¾¡¢Êý¾Ý±à¼­¡¢
 ±íµ¥´¦ÀíµÈ¹¦ÄÜ£¬ÔÙÅäºÏOnline CodingÔÚÏß¿ª·¢Óë´úÂëÉú³ÉÆ÷µÄÊ¹ÓÃ,½«J2EEµÄ¿ª·¢Ð§ÂÊÌá¸ß6±¶ÒÔÉÏ£¬¿ÉÒÔ½«´úÂë¼õÉÙ80%ÒÔÉÏ¡£</br>
 
-* 	JEECG V3.6 °æ±¾¼¼Êõµã×Ü½á:
+* 	JEECG ¼¼Êõµã×Ü½á:
 
 * 	<b>¼¼ÊõµãÒ»£º</b>Online CodingÔÚÏß¿ª·¢(Í¨¹ýÔÚÏßÅäÖÃÊµÏÖÒ»¸ö±íÄ£ÐÍµÄÔöÉ¾¸Ä²é¹¦ÄÜ£¬ÎÞÐèÒ»ÐÐ´úÂë£¬Ö§³ÖÓÃ»§×Ô¶¨Òå±íµ¥²¼¾Ö) </br>
 * 	<b>¼¼Êõµã¶þ£º</b>´úÂëÉú³ÉÆ÷£¬Ö§³Ö¶àÖÖÊý¾ÝÄ£ÐÍ,¸ù¾Ý±íÉú³É¶ÔÓ¦µÄEntity,Service,Dao,Action,JSPµÈ,ÔöÉ¾¸Ä²é¹¦ÄÜÉú³ÉÖ±½ÓÊ¹ÓÃ</br>
@@ -65,8 +68,12 @@ JEECG ¹¦ÄÜÌØµã
 *   <b>¼¼ÊõµãÊ®¶þ£º</b>¶àÖÖÊ×Ò³·ç¸ñÇÐ»»,Ö§³Ö×Ô¶¨ÒåÊ×Ò³·ç¸ñ¡££¨¾­µä·ç¸ñ¡¢Shortcut·ç¸ñ¡¢ACE bootstrap·ç¸ñ¡¢ÔÆ×ÀÃæ·ç¸ñ£©</br>
 *   <b>¼¼ÊõµãÊ®Èý£º</b>ÔÚÏßÅäÖÃ±¨±í£¨ÎÞÐè±àÂë£¬Í¨¹ýÔÚÏßÅäÖÃ·½Ê½£¬ÊµÏÖÇúÏßÍ¼£¬Öù×´Í¼£¬Êý¾ÝµÈ±¨±í£©</br>
 *   <b>¼¼ÊõµãÊ®ËÄ£º</b>¼òÒ×Excelµ¼Èëµ¼³ö£¬Ö§³Öµ¥±íµ¼³öºÍÒ»¶Ô¶à±íÄ£Ê½µ¼³ö£¬Éú³ÉµÄ´úÂë×Ô´øµ¼Èëµ¼³ö¹¦ÄÜ</br>
-	
-* 	JEECG V3.6, ¾­¹ýÁË×¨ÒµÑ¹Á¦²âÊÔ,ÐÔÄÜ²âÊÔ£¬±£Ö¤ºóÌ¨Êý¾ÝµÄ×¼È·ÐÔºÍÒ³Ãæ·ÃÎÊËÙ¶È</br>
+*   <b>¼¼ÊõµãÊ®Îå£º</b>ÒÆ¶¯OA£¬ÒÆ¶¯OAÉóÅú¹¦ÄÜ£¬²ÉÓÃH5¼¼Êõ£¬ÊµÏÖÊÖ»úÒÆ¶¯°ì¹«£¬ÎÞ·ì¶Ô½ÓÎ¢ÐÅ¡¢¶¤¶¤¡¢Î¢ÐÅÆóÒµºÅ¡¢Ò²¿ÉÒÔ×öAPP</br>
+*   <b>¼¼ÊõµãÊ®Áù£º</b>ÒÆ¶¯Í¼±í£¬ÔÚÏßÅäÖÃÒÆ¶¯±¨±í£¬²ÉÓÃH5¼¼Êõ£¬¿ÉÒÔÊÖ»ú¶Ë²é¿´</br>
+*   <b>¼¼ÊõµãÊ®Æß£º</b>²å¼þ¿ª·¢£¬ÒµÎñ¹¦ÄÜ×é¼þÒÔ²å¼þ·½Ê½¼¯³ÉÆ½Ì¨£¬Ò²¿ÉÒÔµ¥¶À²¿Êð·¢·¢²¼£¬ÓÐÁ¦Ö§³ÅÁËSAASÔÆÓ¦ÓÃÏµÍ³ÐèÇó</br>
+
+
+* 	JEECG V3.6.2, ¾­¹ýÁË×¨ÒµÑ¹Á¦²âÊÔ,ÐÔÄÜ²âÊÔ£¬±£Ö¤ºóÌ¨Êý¾ÝµÄ×¼È·ÐÔºÍÒ³Ãæ·ÃÎÊËÙ¶È</br>
 * 	Ö§³Ö¶àÖÖä¯ÀÀÆ÷: IE, »ðºü, Google µÈ</br>
 * 	Ö§³ÖÊý¾Ý¿â: Mysql,Oracle10g,Postgre,SqlServerµÈ</br>
 * 	»ù´¡È¨ÏÞ: ÓÃ»§£¬½ÇÉ«£¬²Ëµ¥È¨ÏÞ£¬°´Å¥È¨ÏÞ£¬Êý¾ÝÈ¨ÏÞ</br>
