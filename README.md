@@ -83,6 +83,23 @@ JEECG 功能特点
 * 	要求JDK1.6+</br>
 
 
+技术文档
+-----------------------------------
+* [JEECG 搭建环境手把手入门](http://wiki.jeecg.org/pages/viewpage.action?pageId=5439521)
+* [JEECG 开发入门视频](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
+* [JEECG 在线演示](http://demo.jeecg.org)
+* [JEECG 技术论坛](http://www.jeecg.org)
+* [JEECG 更多文档](http://wiki.jeecg.org/display/12/Home)
+
+
+    
+技术交流
+-----------------------------------
+* 	作者：[张代浩](http://www.jeecg.org/forum.php?mod=viewthread&tid=1047)</br>
+* 	邮箱：jeecg@sina.com</br>
+* 	QQ交流群： 106838471（二群）、106259349（一群）</br>
+
+
 
 系统演示
 -----------------------------------
@@ -151,19 +168,3 @@ JEECG 功能特点
     </div>
     </div>
     
-
-技术文档
------------------------------------
-* [JEECG 搭建环境手把手入门](http://wiki.jeecg.org/pages/viewpage.action?pageId=5439521)
-* [JEECG 开发入门视频](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
-* [JEECG 在线演示](http://demo.jeecg.org)
-* [JEECG 技术论坛](http://www.jeecg.org)
-* [JEECG 更多文档](http://wiki.jeecg.org/display/12/Home)
-
-
-    
-技术交流
------------------------------------
-* 	作者：[张代浩](http://www.jeecg.org/forum.php?mod=viewthread&tid=1047)</br>
-* 	邮箱：jeecg@sina.com</br>
-* 	QQ交流群： 106838471（二群）、106259349（一群）</br>
