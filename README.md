@@ -89,6 +89,7 @@ JEECG 功能特点
 * [JEECG 常见问题大全](http://www.jeecg.org/forum.php?mod=viewthread&tid=1830&extra=page%3D1)
 * [JEECG 本地Maven仓库下载](http://git.oschina.net/jeecg/jeecg-local-maven)
 * [JEECG Lib包下载，供改造非maven工程](http://git.oschina.net/jeecg/jeecg-local-maven)
+* [JEECG 非maven版本下载](http://git.oschina.net/jeecg/jeecg-no_maven)
 * [JEECG 开发入门视频](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
 * [JEECG 更多文档](http://wiki.jeecg.org/display/12/Home)
 * [JEECG 在线演示DEMO](http://demo.jeecg.org)
