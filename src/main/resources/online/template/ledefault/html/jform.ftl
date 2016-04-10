@@ -14,6 +14,26 @@
   
   <link rel="stylesheet" href="plug-in/Validform/css/metrole/style.css" type="text/css"/>
   <link rel="stylesheet" href="plug-in/Validform/css/metrole/tablefrom.css" type="text/css"/>
+  
+  <script type="text/javascript" src="plug-in/jquery/jquery-1.8.3.js"></script>
+  <script type="text/javascript" src="plug-in/tools/dataformat.js"></script>
+  <script type="text/javascript" src="plug-in/easyui/jquery.easyui.min.1.3.2.js"></script>
+  <script type="text/javascript" src="plug-in/easyui/locale/zh-cn.js"></script>
+  <script type="text/javascript" src="plug-in/tools/syUtil.js"></script>
+  <script type="text/javascript" src="plug-in/My97DatePicker/WdatePicker.js"></script>
+  <script type="text/javascript" src="plug-in/lhgDialog/lhgdialog.min.js"></script>
+  <script type="text/javascript" src="plug-in/tools/curdtools_zh-cn.js"></script>
+  <script type="text/javascript" src="plug-in/tools/easyuiextend.js"></script>
+  <script type="text/javascript" src="plug-in/Validform/js/Validform_v5.3.1_min_zh-cn.js"></script>
+  <script type="text/javascript" src="plug-in/Validform/js/Validform_Datatype_zh-cn.js"></script>
+  <script type="text/javascript" src="plug-in/Validform/js/datatype_zh-cn.js"></script>
+  <script type="text/javascript" src="plug-in/Validform/plugin/passwordStrength/passwordStrength-min.js"></script>
+  <link rel="stylesheet" href="plug-in/uploadify/css/uploadify.css" type="text/css"></link>
+  <script type="text/javascript" src="plug-in/uploadify/jquery.uploadify-3.1.js"></script>
+  <link rel="stylesheet" href="plug-in/umeditor/themes/default/css/umeditor.css" type="text/css"></link>
+  <script type="text/javascript" src="plug-in/umeditor/umeditor.config.js"></script>
+  <script type="text/javascript" src="plug-in/umeditor/umeditor.min.js"></script>
+  <script type="text/javascript" src="plug-in/umeditor/lang/zh-cn/zh-cn.js"></script>
 </head>
 
  <body>
@@ -176,7 +196,7 @@
 						
 						<#elseif po.show_type=='popup'>
 							<input id="${po.field_name}" ${po.extend_json?if_exists} name="${po.field_name}"  type="text"
-							        class="searchbox-inputtext" 
+							        class="form-control searchbox-inputtext" 
 							       onClick="inputClick(this,'${po.dict_text?if_exists?html}','${po.dict_table?if_exists?html}');" 
 							       value="${data['${tableName}']['${po.field_name}']?if_exists?html}"
 					               <#if po.operationCodesReadOnly?if_exists> readonly = "readonly"</#if>
@@ -376,7 +396,6 @@
 			   <div class="con-wrapper" id="con-wrapper2" style="display: block;"></div>
 			 </div>
 	</form>
-<script type="text/javascript" src="plug-in/jquery/jquery-1.8.3.js"></script><script type="text/javascript" src="plug-in/tools/dataformat.js"></script><script type="text/javascript" src="plug-in/easyui/jquery.easyui.min.1.3.2.js"></script><script type="text/javascript" src="plug-in/easyui/locale/zh-cn.js"></script><script type="text/javascript" src="plug-in/tools/syUtil.js"></script><script type="text/javascript" src="plug-in/My97DatePicker/WdatePicker.js"></script><script type="text/javascript" src="plug-in/lhgDialog/lhgdialog.min.js"></script><script type="text/javascript" src="plug-in/tools/curdtools_zh-cn.js"></script><script type="text/javascript" src="plug-in/tools/easyuiextend.js"></script><script type="text/javascript" src="plug-in/Validform/js/Validform_v5.3.1_min_zh-cn.js"></script><script type="text/javascript" src="plug-in/Validform/js/Validform_Datatype_zh-cn.js"></script><script type="text/javascript" src="plug-in/Validform/js/datatype_zh-cn.js"></script><script type="text/javascript" src="plug-in/Validform/plugin/passwordStrength/passwordStrength-min.js"></script>
 <script type="text/javascript">$(function(){$("#formobj").Validform({tiptype:1,btnSubmit:"#btn_sub",btnReset:"#btn_reset",ajaxPost:true,usePlugin:{passwordstrength:{minLen:6,maxLen:18,trigger:function(obj,error){if(error){obj.parent().next().find(".Validform_checktip").show();obj.find(".passwordStrength").hide();}else{$(".passwordStrength").show();obj.parent().next().find(".Validform_checktip").hide();}}}},callback:function(data){if(data.success==true){uploadFile(data);}else{if(data.responseText==''||data.responseText==undefined){$.messager.alert('错误', data.msg);$.Hidemsg();}else{try{var emsg = data.responseText.substring(data.responseText.indexOf('错误描述'),data.responseText.indexOf('错误信息')); $.messager.alert('错误',emsg);$.Hidemsg();}catch(ex){$.messager.alert('错误',data.responseText+'');}} return false;}if(!neibuClickFlag){var win = frameElement.api.opener; win.reloadTable();}}});});</script>
 	<#--update-end--Author:luobaoli  Date:20150614 for：表单单表属性中增加了扩展参数 ${po.extend_json?if_exists}-->
 <script type="text/javascript">

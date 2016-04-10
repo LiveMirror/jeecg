@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<style>
-*{font-size:12px; font-family:cursive,"Arial","Microsoft YaHei","黑体","宋体",sans-serif;}
-</style>
+
+<link rel="stylesheet" type="text/css" href="plug-in/accordion/css/accordion.css">
 <!-- add-begin--Author:jg_renjie  Date:20150610 for：今天需要提醒的【系统信息】 -->	
 <script type="text/javascript" src="plug-in/login/js/getMsgs.js"></script>
 <!-- add-begin--Author:jg_renjie  Date:20150610 for：今天需要提醒的【系统信息】	 -->
