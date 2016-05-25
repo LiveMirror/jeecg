@@ -85,14 +85,14 @@ JEECG 功能特点
 
 技术文档
 -----------------------------------
-* [JEECG 开发环境手把手入门](http://blog.csdn.net/zhangdaiscott/article/details/50915206)
-* [JEECG 常见问题大全](http://www.jeecg.org/forum.php?mod=viewthread&tid=1830&extra=page%3D1)
-* [JEECG 本地Maven仓库下载](http://git.oschina.net/jeecg/jeecg-local-maven)
-* [JEECG Lib包下载，供改造非maven工程](http://git.oschina.net/jeecg/jeecg-local-maven)
-* [JEECG 非maven版本下载](http://git.oschina.net/jeecg/jeecg-no_maven)
+* [JEECG 开发环境搭建入门必读](http://blog.csdn.net/zhangdaiscott/article/details/50915206)
 * [JEECG 开发入门视频](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
-* [JEECG 更多文档](http://wiki.jeecg.org/display/12/Home)
-* [JEECG 在线演示DEMO](http://demo.jeecg.org)
+* [JEECG 入门常见问题必读](http://www.jeecg.org/forum.php?mod=viewthread&tid=1830&extra=page%3D1)
+* [在线演示](http://demo.jeecg.org)
+
+* maven依赖下载有问题的，可以直接下载官方提供的[JEECG本地Maven仓库](http://git.oschina.net/jeecg/jeecg-local-maven)
+* 不熟悉maven的同学，直接用[myeclipse非maven版本](http://git.oschina.net/jeecg/jeecg-no_maven)
+
 
 
     
