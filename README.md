@@ -98,10 +98,8 @@ JEECG 功能特点
     
 技术交流
 -----------------------------------
-* 	作者：[张代浩](http://www.jeecg.org/forum.php?mod=viewthread&tid=1047)</br>
-* 	邮箱：jeecg@sina.com</br>
+* 	作者：[张代浩](http://blog.csdn.net/zhangdaiscott)</br>
 * 	QQ交流群： 176031980、106838471（满）、106259349（满）</br>
-*   论坛：[www.jeecg.org](http://www.jeecg.org)
 
 
 社区荣誉
