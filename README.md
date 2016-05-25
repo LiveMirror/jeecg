@@ -90,8 +90,8 @@ JEECG 功能特点
 * [JEECG 入门常见问题必读](http://www.jeecg.org/forum.php?mod=viewthread&tid=1830&extra=page%3D1)
 * [在线演示](http://demo.jeecg.org)
 
-* maven依赖下载有问题的，可以直接下载官方提供的[JEECG本地Maven仓库](http://git.oschina.net/jeecg/jeecg-local-maven)
-* 不熟悉maven的同学，直接用[myeclipse非maven版本](http://git.oschina.net/jeecg/jeecg-no_maven)
+* maven依赖下载有问题的，可以直接下载官方提供的 -> [JEECG本地Maven仓库](http://git.oschina.net/jeecg/jeecg-local-maven)
+* 不熟悉maven的同学，直接用 -> [myeclipse非maven版本](http://git.oschina.net/jeecg/jeecg-no_maven)
 
 
 
