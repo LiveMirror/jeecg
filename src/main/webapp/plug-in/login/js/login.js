@@ -1,5 +1,13 @@
 $(document).ready(function() {
 	
+	//author:scott---date:20160426---for:判断浏览器跳转兼容风格
+	var navigatorName = "Microsoft Internet Explorer"; 
+	if( navigator.appName == navigatorName ){ 
+		alert("IE浏览器采用传统首页风格，更佳体验建议使用Chrome浏览器!") 
+		setCookie("JEECGINDEXSTYLE","shortcut");
+	}else{
+	}
+	
 	$("#userName").attr("nullmsg",pleaseinutusername);
 	$("#userName").attr("title",username);
 	
@@ -8,6 +16,7 @@ $(document).ready(function() {
 	
 	$("#randCode").attr("nullmsg",pleaseinputvalidatecode);
 	$("#randCode").attr("title",validatecode);
+	
 	
 	getCookie();
 	onfocus();
@@ -92,7 +101,11 @@ function submit()
 	});
 	if (submit) {
 		hideTop();
-		loading(checking, 1);
+		try {
+			loading(checking, 1);
+		} catch (e) {
+			// TODO: handle exception
+		}
 		setTimeout("unloading()", 1000);
 		setTimeout("Login()", 1000);
 	}
@@ -312,4 +325,12 @@ function jrumble() {
 	});
 	$('.inner').trigger('startRumble');
 	setTimeout('$(".inner").trigger("stopRumble")', 500);
+}
+
+function setCookie(name,value)
+{
+var Days = 30;
+var exp = new Date();
+exp.setTime(exp.getTime() + Days*24*60*60*1000);
+document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
 }
