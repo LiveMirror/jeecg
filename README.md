@@ -1,7 +1,7 @@
 JEECG 微云快速开发平台
 ===============
 
-当前最新版本： 3.6.3（发布日期：20160410）
+当前最新版本： 3.6.4（发布日期：20160701）
 
 前言：
 -----------------------------------
@@ -73,7 +73,7 @@ JEECG 功能特点
 *   <b>技术点十七：</b>插件开发，业务功能组件以插件方式集成平台，也可以单独部署发发布，有力支撑了SAAS云应用系统需求</br>
 
 
-* 	JEECG V3.6.2, 经过了专业压力测试,性能测试，保证后台数据的准确性和页面访问速度</br>
+* 	JEECG V3.6.4, 经过了专业压力测试,性能测试，保证后台数据的准确性和页面访问速度</br>
 * 	支持多种浏览器: IE, 火狐, Google 等</br>
 * 	支持数据库: Mysql,Oracle10g,Postgre,SqlServer等</br>
 * 	基础权限: 用户，角色，菜单权限，按钮权限，数据权限</br>
@@ -89,6 +89,7 @@ JEECG 功能特点
 * [JEECG 开发入门视频](http://www.jeecg.org/forum.php?mod=viewthread&tid=197&extra=page%3D1)
 * [JEECG 入门常见问题必读](http://www.jeecg.org/forum.php?mod=viewthread&tid=1830&extra=page%3D1)
 * [在线演示](http://demo.jeecg.org)
+* [JEECG云应用平台中心](http://yun.jeecg.org)
 
 * maven依赖下载有问题的，可以直接下载官方提供的 => [JEECG本地Maven仓库](http://git.oschina.net/jeecg/jeecg-local-maven)
 * 不熟悉maven的同学，直接用 => [myeclipse非maven版本](http://git.oschina.net/jeecg/jeecg-no_maven)
