@@ -27,7 +27,7 @@
             $("#orgSelect").combobox("setValues", ${orgIdList});
             $("#orgSelect").combotree("setValues", ${orgIdList});
         }); --%>
-//       update-start--Author:zhangguoming  Date:20140826 for：将combobox修改为combotree
+
 
 		function openDepartmentSelect() {
 			$.dialog.setting.zIndex = getzIndex(); 
