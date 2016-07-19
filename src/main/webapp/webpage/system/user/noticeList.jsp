@@ -9,7 +9,6 @@
    <t:dgCol title="标题" field="noticeTitle" width="120"></t:dgCol>
  Author:xugj  Date:20160330 for：#1012 【平台bug】系统公告列表时间格式不对 -->
    <t:dgCol title="时间" field="createTime" formatter="yyyy-MM-dd hh:mm" width="80"></t:dgCol>
- -end Author:xugj  Date:20160330 for：#1012 【平台bug】系统公告列表时间格式不对 -->
    <t:dgCol title="common.operation" field="opt" width="40"></t:dgCol>
    <t:dgFunOpt funname="doRead(id,isRead)" title="common.read"></t:dgFunOpt>
   </t:datagrid>
