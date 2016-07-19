@@ -337,7 +337,6 @@ dialog.oncancel = function () {
     }
 };
 dialog.onok = function (){
-    <!--update-begin--Author:zzl  Date:20151108 for：控件名称为空时优先使用字段名称 -->
     if($G('orgname').value==''){
         var selectedField=$('#field').find("option:selected");
         var flag=false;
@@ -354,7 +353,6 @@ dialog.onok = function (){
             return false;
         }
     }
-    <!--update-end--Author:zzl  Date:20151108 for：控件名称为空时优先使用字段名称 -->
     var gTitle=$G('orgname').value.replace(/\"/g,"&quot;");
     var gChecked = 'orgchecked0';
     if ($G('orgchecked1').checked) gChecked = 'orgchecked1';

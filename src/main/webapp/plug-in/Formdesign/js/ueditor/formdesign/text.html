@@ -178,7 +178,6 @@ dialog.oncancel = function () {
     }
 };
 dialog.onok = function (){
-    <!--update-begin--Author:zzl  Date:20151108 for：控件名称为空时优先使用字段名称 -->
     if($G('orgname').value==''){
         var selectedField=$('#field').find("option:selected");
         var flag=false;
@@ -195,7 +194,6 @@ dialog.onok = function (){
             return false;
         }
     }
-    <!--update-end--Author:zzl  Date:20151108 for：控件名称为空时优先使用字段名称 -->
     var gValue=$G('orgvalue').value.replace(/\"/g,"&quot;"),gTitle=$G('orgname').value.replace(/\"/g,"&quot;"),gFontSize=$G('orgfontsize').value,gAlign=$G('orgalign').value,gWidth=$G('orgwidth').value,gHeight=$G('orgheight').value,gType=$G('orgtype').value;
     var datasource=$('#datasource').val();
     var field=$('#field').val();
