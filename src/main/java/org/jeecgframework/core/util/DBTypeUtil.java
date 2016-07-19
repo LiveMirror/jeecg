@@ -37,6 +37,9 @@ public class DBTypeUtil {
 			}else if (dbdialect.equals("org.hibernate.dialect.PostgreSQLDialect")) {
 				retStr = "postgres";
 			}
+			else if (dbdialect.equals("org.jeecgframework.core.common.hibernate.SQLServer2008Dialect")) {
+				retStr = "sqlserver";
+			}
 			return retStr;
 		}
 	}
