@@ -65,11 +65,11 @@ public class TempletContext {
 			return null;
 		}
 		String oldTableName = tableName;
-
+//        update-start--Author:zhangguoming  Date:20140922 for：根据ftlVersion动态读取模板
         if (ftlVersion != null && ftlVersion.length() > 0) {
             tableName = tableName + "&ftlVersion=" + ftlVersion;
         }
-
+//        update-end--Author:zhangguoming  Date:20140922 for：根据ftlVersion动态读取模板
         try {
 			if(CgAutoListConstant.SYS_MODE_DEV.equalsIgnoreCase(_sysMode)){//开发模式
 				template = freemarker.getTemplate(tableName,freemarker.getLocale(), ENCODING);
@@ -112,6 +112,24 @@ public class TempletContext {
 		}
 		return template;
 	}
+	
+	/**
+	 * 从缓存中读取ftl模板
+	 * @param template
+	 * @param encoding
+	 * @return
+	 */
+	public void removeTemplateFromCache(String tableName){
+		try {
+			//获取版本号
+	    	String version = cgFormFieldService.getCgFormVersionByTableName(tableName);
+			//cache的键：类名.方法名.参数名
+			String cacheKey = FreemarkerHelper.class.getName()+".getTemplateFormCache."+tableName+"."+version;
+			ehCache.remove(cacheKey);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	public Configuration getFreemarker() {
 		return freemarker;
@@ -128,7 +146,7 @@ public class TempletContext {
 	public void setTags(Map<String, TemplateDirectiveModel> tags) {
 		this.tags = tags;
 	}
-
+	//update-begin--Author:张忠亮  Date:20151121 for：清除缓存
 	public void clearCache(){
 		try{
 			ehCache.removeAll();
@@ -136,5 +154,5 @@ public class TempletContext {
 
 		}
 	}
-
+	//update-end--Author:张忠亮  Date:20151121 for：清除缓存
 }

@@ -8,15 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-
-import org.jeecgframework.web.cgform.common.OfficeHtmlUtil;
-import org.jeecgframework.web.cgform.entity.cgformftl.CgformFtlEntity;
-import org.jeecgframework.web.cgform.service.cgformftl.CgformFtlServiceI;
-import org.jeecgframework.web.cgform.service.config.CgFormFieldServiceI;
-import org.jeecgframework.web.cgform.util.TemplateUtil;
-import org.jeecgframework.web.system.service.SystemService;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
@@ -36,8 +28,14 @@ import org.jeecgframework.core.util.ResourceUtil;
 import org.jeecgframework.core.util.StringUtil;
 import org.jeecgframework.core.util.oConvertUtils;
 import org.jeecgframework.tag.core.easyui.TagUtil;
+import org.jeecgframework.web.cgform.common.OfficeHtmlUtil;
+import org.jeecgframework.web.cgform.engine.TempletContext;
+import org.jeecgframework.web.cgform.entity.cgformftl.CgformFtlEntity;
+import org.jeecgframework.web.cgform.entity.config.CgFormHeadEntity;
+import org.jeecgframework.web.cgform.service.cgformftl.CgformFtlServiceI;
+import org.jeecgframework.web.cgform.util.TemplateUtil;
+import org.jeecgframework.web.system.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -70,7 +68,7 @@ public class CgformFtlController extends BaseController {
 	@Autowired
 	private SystemService systemService;
 	@Autowired
-	private CgFormFieldServiceI cgFormFieldService;
+	private TempletContext templetContext;
 
 
 	/**
@@ -191,14 +189,18 @@ public class CgformFtlController extends BaseController {
 		AjaxJson j = new AjaxJson();
 		try {
 			// 判断有没有激活过的模板
-			cgformFtl = systemService.getEntity(CgformFtlEntity.class,
-					cgformFtl.getId());
+			cgformFtl = systemService.getEntity(CgformFtlEntity.class,cgformFtl.getId());
 			if (!cgformFtlService.hasActive(cgformFtl.getCgformId())) {
 				cgformFtl.setFtlStatus("1");
 				cgformFtlService.saveOrUpdate(cgformFtl);
 				message = "激活成功";
-				systemService.addLog(message, Globals.Log_Type_UPDATE,
-						Globals.Log_Leavel_INFO);
+				//update-begin----date:20160721------for:清除缓存---------------------------------------------
+				CgFormHeadEntity po = systemService.getEntity(CgFormHeadEntity.class, cgformFtl.getCgformId());
+				templetContext.removeTemplateFromCache(po.getTableName()+"_"+TemplateUtil.TemplateType.ADD.getName());
+				templetContext.removeTemplateFromCache(po.getTableName()+"_"+TemplateUtil.TemplateType.DETAIL.getName());
+				templetContext.removeTemplateFromCache(po.getTableName()+"_"+TemplateUtil.TemplateType.UPDATE.getName());
+				//update-end----date:20160721------for:清除缓存----------------------------------------------
+				systemService.addLog(message, Globals.Log_Type_UPDATE,Globals.Log_Leavel_INFO);
 				j.setSuccess(true);
 				j.setMsg(message);
 			} else {
@@ -227,8 +229,13 @@ public class CgformFtlController extends BaseController {
 		String message = null;
 		AjaxJson j = new AjaxJson();
 		try {
-			cgformFtl = systemService.getEntity(CgformFtlEntity.class,
-					cgformFtl.getId());
+			cgformFtl = systemService.getEntity(CgformFtlEntity.class,cgformFtl.getId());
+			//update-begin----date:20160721------for:清除缓存----------------------------------------------
+			CgFormHeadEntity po = systemService.getEntity(CgFormHeadEntity.class, cgformFtl.getCgformId());
+			templetContext.removeTemplateFromCache(po.getTableName()+"_"+TemplateUtil.TemplateType.ADD.getName());
+			templetContext.removeTemplateFromCache(po.getTableName()+"_"+TemplateUtil.TemplateType.DETAIL.getName());
+			templetContext.removeTemplateFromCache(po.getTableName()+"_"+TemplateUtil.TemplateType.UPDATE.getName());
+			//update-end----date:20160721------for:清除缓存-----------------------------------------------
 			cgformFtl.setFtlStatus("0");
 			cgformFtlService.saveOrUpdate(cgformFtl);
 			message = "取消激活成功";
@@ -619,7 +626,7 @@ public class CgformFtlController extends BaseController {
 //			System.out.println(json.getString("data"));
 //			// 判断有没有激活过的模板
 //			message = FormUtil.GetHtml(json.getString("parse"),json.getString("data"), action);
-
+			//update-begin--Author:jg_renjie  Date:20150706 for：更改解析前台传来的html
 			if(StringUtils.isNotBlank(parseForm)){
 				TemplateUtil tool = new TemplateUtil();
 				Map<String,Object> map = tool.processor(parseForm);
@@ -627,7 +634,7 @@ public class CgformFtlController extends BaseController {
 			} else {
 				j.setMsg("");
 			}
-
+			//update-end--Author:jg_renjie  Date:20150706 for：更改解析前台传来的html
 			j.setSuccess(true);
 		} catch (Exception e) {
 			logger.info(e.getMessage());
