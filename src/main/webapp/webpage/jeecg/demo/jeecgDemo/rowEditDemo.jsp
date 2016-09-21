@@ -6,15 +6,16 @@
 <t:datagrid name="jeecgDemoList2" title="行编辑示例"  actionUrl="jeecgDemoController.do?datagrid"
 	idField="id" queryMode="group" checkbox="true" >
 	<t:dgCol title="编号" field="id" hidden="true" ></t:dgCol>
-	<t:dgCol title="用户名" field="userName" query="true"  extendParams="editor:'text''"></t:dgCol>
-	<t:dgCol title="电话号码"  field="mobilePhone" query="true" extendParams="editor:'text''"></t:dgCol>
-	<t:dgCol title="办公电话" field="officePhone" query="true"  extendParams="editor:'text''"></t:dgCol>
-	<t:dgCol title="创建日期" field="createDate" formatter="yyyy-MM-dd" query="true" queryMode="group"  extendParams="editor:'datebox''"></t:dgCol>
-	<t:dgCol title="邮箱" field="email" query="true" editor="textbox" extendParams="editor:'text''"></t:dgCol>
-	<t:dgCol title="年龄" sortable="true" field="age" query="true" extendParams="editor:'numberbox''"></t:dgCol>
-	<t:dgCol title="工资" field="salary" query="true" extendParams="editor:'numberbox''"></t:dgCol>
-
-	<t:dgCol title="生日" field="birthday" formatter="yyyy/MM/dd" query="true" extendParams="editor:'datebox''"></t:dgCol>
+	<t:dgCol title="用户名" field="userName" query="true"  extendParams="editor:'text'"></t:dgCol>
+	<t:dgCol title="电话号码"  field="mobilePhone" query="true" extendParams="editor:'text'"></t:dgCol>
+	<t:dgCol title="办公电话" field="officePhone" query="true"  extendParams="editor:'text'"></t:dgCol>
+	<t:dgCol title="创建日期" field="createDate" formatter="yyyy-MM-dd" query="true" queryMode="group"  extendParams="editor:'datebox'"></t:dgCol>
+	<t:dgCol title="邮箱" field="email" query="true" editor="textbox" extendParams="editor:'text'"></t:dgCol>
+	<t:dgCol title="年龄" sortable="true" field="age" query="true" extendParams="editor:'numberbox'"></t:dgCol>
+	<t:dgCol title="工资" field="salary" query="true" extendParams="editor:'numberbox'"></t:dgCol>
+	
+	<t:dgCol title="生日" field="birthday" formatter="yyyy/MM/dd" query="true" extendParams="editor:'datebox'"></t:dgCol>
+	<t:dgCol title="性别" field="sex" extendParams="editor:'combobox'" dictionary="sex" width="100"></t:dgCol>
 	<t:dgToolBar operationCode="add" title="录入" icon="icon-add"  funname="addRow"></t:dgToolBar>
 	<t:dgToolBar operationCode="edit" title="编辑" icon="icon-edit"  funname="editRow"></t:dgToolBar>
 	<t:dgToolBar operationCode="save" title="保存" icon="icon-save" url="jeecgDemoController.do?saveRows" funname="saveData"></t:dgToolBar>
@@ -81,6 +82,7 @@
 			$('#'+gname).datagrid('beginEdit', index);
 		}
 	}
+	//update-begin--Author:张忠亮  Date:20150709 for：修正 取消编辑后再次点击录入不进入编辑状态
 	//取消编辑
 	function reject(title,addurl,gname){
 		$('#'+gname).datagrid('clearChecked');

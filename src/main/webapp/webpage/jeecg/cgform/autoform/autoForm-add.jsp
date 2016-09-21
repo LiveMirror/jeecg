@@ -42,19 +42,23 @@
 	  function initMainTableSourceSelect(){
 		  var ztree = $.fn.zTree.getZTreeObj("dbSelect");
 		  var node = ztree.getNodesByParam("pid", 0, null);
+		//update-begin--Author: jg_renjie  Date:20151210 for：【自定义表单】表单主数据源不允许录入，只允许选择
 		  var options = "<option value=''>请选择主数据源</option>";
 		  $.each(node,function(i,f){
 			  options += "<option value='"+f.dbCode+"'>"+f.name+"</option>";
 		  })
 		  $("#mainTableSource").html(options);
+		//update-end--Author: jg_renjie  Date:20151210 for：【自定义表单】表单主数据源不允许录入，只允许选择
 	  }
 	 $(function(){
 		 $.fn.zTree.init($("#dbSelect"), setting, []);
 		 var styleDate = eval('${styleSelect}');
+		 //update-begin--Author: jg_huangxg  Date:20151102 for：树菜单ICON图标自定义实现
 		 var iconPath = "plug-in/ztree/css/img/diy/2.png";
 		 $(styleDate).each(function(i){
 			this.icon = iconPath;
 		 });
+		//update-end--Author: jg_huangxg  Date:20151102 for：树菜单ICON图标自定义实现
 		 $.fn.zTree.init($("#styleSelect"), stylesetting, styleDate);
 		 initMainTableSourceSelect();
 		 
@@ -392,11 +396,11 @@
 	<table style="width: 100%;" cellpadding="0" cellspacing="1" class="formtable">
 		<tr>
 			<td align="right" style="width: 8%;"><label class="Validform_label"> 表单编码: </label></td>
-			<td class="value" style="width: 20%;"><input id="formName" name="formName" type="text" style="width: 75%;" class="easyui-validatebox" required="true" errorMsg="不能为中文"  ajaxurl="autoFormController.do?checkTbCode" datatype="/^[A-Za-z\d-._]+$/"  missingMessage="表单名称必须填写"> <span class="Validform_checktip"></span> <label class="Validform_label" style="display: none;">表单编码</label></td>
+			<td class="value" style="width: 20%;"><input id="formName" name="formName" type="text" style="width: 75%;" class="easyui-validatebox" required="true" errorMsg="不能为中文"  ajaxurl="autoFormController.do?checkTbCode" datatype="/^[A-Za-z\d-._]+$/"  missingMessage="表单编码必须填写"> <span class="Validform_checktip"></span> <label class="Validform_label" style="display: none;">表单编码</label></td>
 			<td align="right" style="width: 8%;"><label class="Validform_label"> 表单名: </label></td>
 			<td class="value" style="width: 20%;"><input id="formDesc" required="true" name="formDesc" type="text" style="width: 75%;" class="easyui-validatebox"> <span class="Validform_checktip"></span> <label class="Validform_label" style="display: none;">表单名</label></td>
 			<td align="right" style="width: 8%;"><label class="Validform_label"> 主数据源: </label></td>
-			<td class="value" style="width: 20%;"><select id="mainTableSource"></select> <span class="Validform_checktip"></span> <label class="Validform_label" style="display: none;">表单名</label></td>
+			<td class="value" style="width: 20%;"><select id="mainTableSource" name="mainTableSource"></select> <span class="Validform_checktip"></span> <label class="Validform_label" style="display: none;">表单名</label></td>
 		</tr>
 		<tr>
 			<td class="value" colspan=6><input id="formContent" name="formContent" type="hidden"> <script id="content" type="text/plain" style="width:99%;"></script></td>
