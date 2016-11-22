@@ -87,6 +87,7 @@ JEECG 功能特点
 * JEECG 云平台插件下载中心：[http://yun.jeecg.org](http://yun.jeecg.org)
 * [JEECG更多版本下载地址](http://www.jeecg.org/forum.php?mod=viewthread&tid=1229&extra=page%3D1)
 * 不熟悉maven的同学，直接下载 => [myeclipse非maven版本](http://git.oschina.net/jeecg/jeecg-no_maven)
+* Maven依赖下载慢解决方案 => [享受一下mvn时飞的感觉](http://www.jeecg.org/forum.php?mod=viewthread&tid=3949)
 * maven依赖下载有问题的，可以直接下载官方提供的 => [JEECG本地Maven仓库](http://git.oschina.net/jeecg/jeecg-local-maven)
 
 
